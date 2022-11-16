@@ -1,0 +1,6 @@
+.env
+node_modules
+lib/extensions/_extensions.scss
+usage-data-config.json
+public
+.DS_Store

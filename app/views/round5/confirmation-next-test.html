@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div><a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Print this page</a>
+</div>
+<br>
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+  {{ govukPanel({
+    titleText: "Driving test booking confirmed",
+    html: "Driving test reference number:<br><strong>42363349</strong>"
+  }) }}
+<br>
+</div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body">We have sent you a confirmation email with more information about your test. If you can't find the email, please check your spam and junk folders.</p>
+
+      <h2 class="govuk-heading-m">Keep your driving test reference number safe</h2>
+      <p class="govuk-body">
+      You'll need it to check, cancel or change this test.</p>
+      <p class="govuk-body">
+      Find out how to <a href="#">change or cancel your test</a></p>
+<br>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Test type"
+          },
+          value: {
+            text: "Car"
+          }
+        },
+        {
+          key: {
+            text: "Cost"
+          },
+          value: {
+            text: "£62.00"
+          }
+        },
+        {
+          key: {
+            text: "Test time and date"
+          },
+          value: {
+            text: "10:30am, 8 November 2022"
+          }
+        },
+        {
+          key: {
+            text: "Location of test"
+          },
+          value: {
+            html: '<span class="govuk-!-font-weight-bold">Birmingham (Kings Heath)</span><br>955 Alcester Road South, <br>Birmingham,<br> B14 5JA'
+          }
+        },
+        {
+          key: {
+            text: "Language of test"
+          },
+          value: {
+            text: "English"
+          }
+        },
+        {
+          key: {
+            text: "Support requested"
+          },
+          value: {
+            html: '
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>Support options you selected would show here*</li>
+              <li>Support options you selected would show here*</li>
+              <li>Any other info you typed into the free text box would also be displayed here, for your reference*</li>
+            </ul>
+          '
+          }
+        }
+      ]
+    }) }}
+    <h2 class="govuk-heading-m">What to take to your test</h2>
+    <p class="govuk-body">You must take:</p>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+  <li>
+    your UK driving licence (if you have an old-style paper licence, you must bring it along with a valid passport)  </li>
+  <li>
+    a car – most people use their driving instructor’s, but you can use your own if it meets the rules  </li>
+</ul>
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Your test can be cancelled and you’ll have to pay again if you don’t bring the right things or you arrive late.",
+  iconFallbackText: "Warning"
+}) }}
+<h2 class="govuk-heading-m">Other important information about your test</h2>
+<p class="govuk-body">The driving examiner’s supervisor can sit in on your test to watch the examiner’s performance. The supervisor won’t have any say in how you’re tested or in your result.</p>
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "Your test can be cancelled and you’ll have to pay again if you don’t let the examiner’s supervisor go with you.",
+  iconFallbackText: "Warning"
+}) }} 
+<p class="govuk-body">DVSA has a zero tolerance policy to abuse, threats and assaults.</p>
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{{ govukWarningText({
+  text: "You can be prosecuted or banned from taking a driving test if you’re verbally or physically violent or threatening to any member of staff.",
+  iconFallbackText: "Warning"
+}) }} 
+{% endblock %}

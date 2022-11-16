@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Tell us what support you need</h1>
+      <p class="govuk-body">Accessible support is available to help make your driving test more comfortable.</p>
+      <p class="govuk-body">You can provide more information about what you need here.</p>
+      <p class="govuk-body">Select 'Continue' if you would prefer to talk about this when we contact you.</p>
+      <p class="govuk-body">Some types of support need time to arrange. This means you may not be able to book online now.</p>
+      <form action="staying-nsa" class="govuk-!-padding-bottom-7">
+        <div class="govuk-form-group">
+          <span id="more-detail-hint" class="govuk-hint">
+            Tell us what you need (optional)
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      
+      </form>
+
+
+</div>
+
+{% endblock %}

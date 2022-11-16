@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">There was a problem</h1>
+        <p class="govuk-body">A technical problem means your payment was not successful. This booking has been cancelled.</p>
+        <p class="govuk-body">If the payment is found to have been successful, it will be refunded as soon as possible.</p>
+        <p class="govuk-body">We’re very sorry. Please <a href="https://www.gov.uk/book-theory-test">try again to book your theory test</a>.
+        <p class="govuk-body">If this problem persists, contact DVSA.</p>
+        <p class="govuk-body"><a href="mailto:theorycustomerservices@dvsa.gov.uk">theorycustomerservices@dvsa.gov.uk</a><br/>
+        Telephone: 0300 2001122<br/>
+        Monday to Friday, 8am to 4pm</p>
+    </div>
+  </div>
+
+{% endblock %}

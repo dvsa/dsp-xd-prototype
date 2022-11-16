@@ -1,0 +1,83 @@
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<div class="govuk-accordion__section {{ "govuk-accordion__section--expanded" if testCentre.expanded }}">
+  <div class="govuk-accordion__section-header">
+    <div class="govuk-accordion__section-heading">
+      <div class="govuk-accordion__section-button">
+        <span class="dsp-medium">
+          {{ testCentre.title }}
+        </span>
+        <span class="dsp-medium" style="float: right;">
+          <strong>{{ testCentre.distance }}</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div id="accordion-default-content-1" class="govuk-accordion__section-content"
+    aria-labelledby="accordion-default-heading-1">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class='govuk-body'>
+          {{ testCentre.address.line1}}<br>
+          {{ testCentre.address.line2}}<br>
+          {{ testCentre.address.line3}}<br>
+        </p>
+        <br>
+        <a class="govuk-link" target="_blank" href="{{ testCentre.viewTestCentreLink}}">
+          View test centre on map
+        </a><br>
+        <br>
+        <a class="govuk-link" target="_blank" href="{{ testCentre.aboutTestCentreLink}}">
+          About this test centre
+        </a>
+        <br>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-panel--custom">
+          <div class="govuk-panel--custom__body">
+            <p>
+              <br>
+              <span>Next available slot</span>
+              <br>
+              <span><strong>{{ testCentre.nextSlot.date}}</strong></span>
+              <br>
+              <span><strong>{{ testCentre.nextSlot.time}}</strong></span>
+              <form class="form" method="post" action="/round6b/candidate-email">
+                <span class="govuk-visually-hidden"> 
+                  <div class="govuk-form-group">
+                    <input class="govuk-input govuk-input--width-50" id="test-centre-name" name="test-centre" value="{{ testCentre.title }}" aria-describedby="test-centre">
+                    <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-1" name="test-centre-address" value="{{ testCentre.address.line1 }}" aria-describedby="test-centre">
+                    <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-2" name="test-centre-address" value="{{ testCentre.address.line2 }}" aria-describedby="test-centre">
+                    <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-3" name="test-centre-address" value="{{ testCentre.address.line3 }}" aria-describedby="test-centre">
+                    </div>
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-input--width-50" id="slot-date" name="slot-information" value="{{ testCentre.nextSlot.date}}" aria-describedby="slot-information">
+                      <input class="govuk-input govuk-input--width-50" id="slot-time" name="slot-information" value="{{ testCentre.nextSlot.time}}" aria-describedby="slot-information">
+                    </div>
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-input--width-50" id="slot-price" name="slot-price" value="£62" type="hidden" aria-describedby="slot-price">
+                    </div>
+                </span>
+                {{ govukButton({
+                  text: "Book this slot",
+                  type: "submit"
+                }) }}
+              </form>
+            </p>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <a class="govuk-button govuk-button--secondary" href="/round6b/choose-test-date-and-time" style="width: 100%" data-module="govuk-button">
+          Check all slots at this centre
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

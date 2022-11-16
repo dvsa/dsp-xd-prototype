@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" id="change-test">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="choose-test-centre-screen">
+        <div class="notification-alert">You can change your previous response here or <a href="check-your-answers">go back and keep it</a>.</div>
+
+      <form action="">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                What do you want to change?
+              </h1>
+            </legend>
+            <p class="govuk-body">Select one option. Your existing booking will be held until you make and confirm any changes.</p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="change-what" type="radio" value="start-time-change" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+                    Just the time of the driving test
+                </label>
+                <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  New time slots on your existing test day may not be available.
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="change-what" type="radio" value="start-day-change" aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                  Time and date of the driving test
+                </label>
+                <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Your existing time slot may be unavailable on a different day
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-2" name="change-what" type="radio" value="start-location-change" aria-describedby="sign-in-2-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+                  Location of the driving test
+                </label>
+                <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                  Your existing date and time slot may be unavailable at a different location.
+              </div>
+            </div>
+          </fieldset>
+          <button class="govuk-button" data-module="govuk-button">
+            Change and continue
+          </button>
+          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Cancel and keep your selection</a>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

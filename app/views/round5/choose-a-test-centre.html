@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Choose a test centre
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "/round5/where-do-you-want-to-take-your-test"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">Choose a test centre</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">
+      There are 5 test centres near <strong>Birmingham</strong>
+      <span style="padding-left: 5px;">•</span>
+      <a class="govuk-link" style="padding-left: 5px;" href="/round5/where-do-you-want-to-take-your-test">change</a>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% include "./test-centre-accordion/test-centre-accordion.html" %}
+  </div>
+</div>
+
+<a href="#">Show more test centres</a>
+
+{% endblock %}

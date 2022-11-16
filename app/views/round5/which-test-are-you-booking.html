@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Which test are you booking
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round5/who-is-taking-the-test"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Which driving test do you want to book?</h1>
+    
+    <form action="/round5/do-you-need-support" class="govuk-!-margin-bottom-3">
+      {{ govukRadios({
+        name: "test-type",
+        items: [
+          {
+            value: "car",
+            text: "Car",
+            hint: {
+
+            }
+          },
+          {
+            value: "motorbike",
+            text: "Motorcycle and moped",
+            hint: {
+
+            }
+          }
+        ]
+      }) }}
+      <p>The price for booking your driving test will vary depending on the type of test and when you book. </p>
+      <p class="govuk-body"><a href="https://www.gov.uk/driving-test-cost#:~:text=A%20theory%20test%20costs%20%C2%A3,driving%20test%20through%20GOV.UK." target="_blank" class="govuk-link">Check prices for booking your driving test (this link will open a new tab)</a></p>
+      </form>
+      <br>
+      <div><hr></div>
+      <br>
+      <br>
+      {{ govukButton({
+        text: "Continue",
+        href: "/round5/do-you-need-support"
+      }) }}
+
+    </form>
+    <br>
+    <br>
+    <h1 class="govuk-heading-l">Booking other types of driving tests</h1>
+    <p>To book a driving test for a different type of vehicle, you need a driving licence with an 'entitlement' for that
+      category of vehicle. </p>
+      <p class="govuk-body"><a href="https://www.gov.uk/driving-licence-categories" target="_blank" class="govuk-link">Get more information about driving licence categories</a></p>
+  </div>
+</div>
+
+{% endblock %}

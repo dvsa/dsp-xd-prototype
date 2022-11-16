@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your booking details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round6/candidate-email"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+{% set supportRequirements %}
+  {% if data['support-type'].length > 0%}
+    {% if data['support-type'].indexOf("No support required") == 0 %}
+      <p>No support required</p>
+    {% else %}
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        {% for item in data['support-type'] %}
+          {% if item == "additional-support-information" %}
+            <li>{{data['more-detail-1']}}</li>
+          {% elif item == "support-not-listed-information" %}
+            <li>{{data['more-detail-2']}}</li>
+          {% else %}
+            <li>{{item}}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% else %}
+      <p>No support required</p>
+  {% endif %}
+{% endset -%}
+
+{% set testCentreLocation %}
+  {% for item in data['test-centre'] %}
+    <p>{{item}}</p>
+  {% endfor %}
+{% endset %}
+
+{% set slotInformation %}
+  {% for item in data['slot-information'] %}
+    <p>{{item}}</p>
+  {% endfor %}
+{% endset %}
+
+{% set slotPrice %}
+    <p>{{data['slot-price']}}</p>
+{% endset %}
+
+
+<div class="govuk-grid-row" id="checkyouranswers">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your booking details</h1>
+
+    {{ govukWarningText({
+      text: "You must pay within 30 minutes. If you take longer, you'll lose your time slot and might still be charged. If this happens, you need to book your driving test again and might not get the time you want.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: "John Robert Smith"
+          },
+          classes: "govuk-summary-list__row--no-actions govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Date of birth"
+          },
+          value: {
+            text: "5 January 1978"
+          },
+          classes: "govuk-summary-list__row--no-actions govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Driving licence number"
+          },
+          value: {
+            text: "DHILL654FTR389B"
+          },
+          classes: "govuk-summary-list__row--no-actions"
+        },
+        {
+          key: {
+            text: "Email address"
+          },
+          value: {
+            text: "johnsmith@email.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round6/candidate-email",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Test details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Test type"
+          },
+          value: {
+            text: "Car"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round6/which-test-are-you-booking",
+                text: "Change",
+                visuallyHiddenText: "test type"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Cost"
+          },
+          value: {
+            html: slotPrice
+          },
+          classes: "govuk-summary-list__row--no-actions"
+        },
+        {
+          key: {
+            text: "Test time and date"
+          },
+          value: {
+            html: slotInformation
+          },
+          actions: {
+            items: [
+              {
+                href: "/round6/choose-test-date-and-time",
+                text: "Change",
+                visuallyHiddenText: "test type"
+              }
+            ]
+          },
+          classes: "govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Location of test"
+          },
+          value: {
+            html: testCentreLocation
+          },
+          actions: {
+            items: [
+              {
+                href: "/round6/choose-a-test-centre",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+
+        },
+        
+        {
+          key: {
+            text: "Language of test"
+          },
+          value: {
+            text: "English"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round6/which-language-do-you-want-to-use",
+                text: "Change",
+                visuallyHiddenText: "language of test"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Support requested"
+          },
+          value: {
+            html: supportRequirements
+          },
+          classes: "govuk-summary-list__row--no-actions",
+          actions: {
+            items: [
+              {
+                href: "/round6/select-support-type",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Continue and pay",
+      href: "/round6/card-payment/card-details"
+    }) }}
+  </div>
+</div>
+{% endblock %}

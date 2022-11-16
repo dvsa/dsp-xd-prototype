@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Claim import reimbursement prototype
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  {% include "includes/back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+
+
+{% if data['code_error'] %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#">The verification code entered is not valid. Check and try again. Or request a new code.</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endif %}
+
+
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px!important;">Enter the verification code</h1>
+
+        <!--
+        <div class="govuk-inset-text">
+          Lorum 
+        </div>
+        -->
+
+        <p style="padding: 0 0 1px 0;"></p>
+
+        {% if data['code_error'] %}
+        <div class="govuk-form-group">
+          <form name="loginform" action="code_validation" method="post">
+            <div class="govuk-form-group govuk-form-group--error">
+              <span id="national-insurance-number-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The verification code entered is not valid. Check and try again. Or request a new code.
+              </span>
+              <label id="event-name-hint" class="govuk-hint">Must be 4 characters, for example 1234.</label>
+              <input class="govuk-input govuk-input--width-5 govuk-input--error" value maxlength="18" type="text" name="mrnref">
+            </div>
+            <p style="padding: 0 0 1.2em 0;"></p>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+          </form>
+        </div>
+        {% else %}
+        <div class="govuk-form-group">
+          <form name="loginform" action="code_validation" method="post">
+            <!--
+            <label class="govuk-body govuk-!-font-weight-bold">Enter the MRN or Entry number</label>
+            -->
+            <label id="event-name-hint" class="govuk-hint">Must be 4 characters, for example 1234.</label>
+            <input class="govuk-input govuk-input--width-5" value maxlength="18" type="text" name="mrnref">
+            <p style="padding: 0 0 1.2em 0;"></p>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+          </form>
+        </div>
+        {% endif %}
+
+        <p style="padding: 0 0 0 0;"></p>
+
+        <p><a href="#">Request a new verification code</a></p>
+
+      </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+

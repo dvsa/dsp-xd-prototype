@@ -1,0 +1,44 @@
+#dateHeading {
+  margin-top: 25px;
+}
+
+#morningTimes, #afternoonTimes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: fit-content;
+  justify-content: space-around;
+  gap: 10px;
+  align-content: center;
+  margin-bottom: 15px;
+}
+
+.slot {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  border: 2px solid black;
+  text-align: center;
+  justify-content: center;
+  font-family: "GDS Transport", arial, sans-serif;
+  padding-top: 25px;
+}
+
+.slot:hover {
+  cursor: pointer;
+  background-color: #1D70B8;
+  color: white;
+}
+
+.slot.selected {
+  background-color: #1D70B8;
+  color: white;
+}
+
+#selectAnotherDate {
+  display: flex;
+  flex-direction: row;
+  width: 770px;
+  justify-content: right;
+}

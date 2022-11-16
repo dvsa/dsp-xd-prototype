@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" id="checkyouranswers">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Your driving test preferences</h1>
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+            John Robert Smith
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+          <!--<a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>-->
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+           03 March 1992
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Driving licence number
+        </dt>
+        <dd class="govuk-summary-list__value">
+           DHILL654FTR389B
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+           johnsmith@email.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="009-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Test details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Test type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ADI Part 1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="which-driving-test-are-you-booking-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £81.00
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+      <!-- <div class="govuk-summary-list__row no-line">
+        <dt class="govuk-summary-list__key">
+          Test time and date
+        </dt>
+        <dd class="govuk-summary-list__value timeslot">
+           8:00am, 2 June 2020
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-to-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div> -->
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location preferences
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <span class="govuk-!-font-weight-bold">Within 2 miles of <strong>Swansea</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="what-to-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Language of test
+        </dt>
+        <dd class="govuk-summary-list__value">
+           English
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="007-langauge-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Support requested
+        </dt>
+        <dd class="govuk-summary-list__value">
+           No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+    <!-- <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+You must pay within 30 minutes. If you take longer, you’ll lose your time slot and might still be charged. If this happens, you need to book your driving test again and might not get the time you want.  </strong>
+</div> -->
+<!-- <p class="govuk-body">You will have to start your booking again and the test slot you were trying to book may no longer be available.</p> -->
+    <a href="pay-1" class="govuk-button">Continue to book a time slot</a>
+  </div>
+</div>
+{% endblock %}

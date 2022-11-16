@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+      <div class="notification-alert">You can change your mind about which language you want translated during your test. Or you can  <a href="cya">keep your existing choice</a>.<br>
+      </div>
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Which language do you want translated?</h1>
+      <p class="govuk-body">Tell us which language you need translated so you can take your driving driving test.</p>
+      <form action="staying-nsa" class="govuk-!-padding-bottom-7">
+        <div class="govuk-form-group">
+          <span id="more-detail-hint" class="govuk-hint">
+            Enter language
+          </span>
+          <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
+            <textarea class="govuk-textarea govuk-js-character-count" id="more-detail" name="wheresbest" rows="5" aria-describedby="more-detail-hint"></textarea>
+            <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You have 4000 characters remaining
+            </div>
+          </div>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Confirm change and continue
+        </button>
+        <a href="cya" class="govuk-button govuk-button--secondary govuk-!-margin-left-2">Cancel and keep existing choice</a>
+
+      </form>
+
+
+</div>
+
+{% endblock %}

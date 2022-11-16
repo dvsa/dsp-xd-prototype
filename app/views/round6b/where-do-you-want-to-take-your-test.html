@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Where do you want to take your driving test
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round6b/which-language-do-you-want-to-use"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Where do you want to take your driving test?</h1>
+
+    {{ govukInput({
+        hint: {
+          text: "Enter a postcode or place. For example, SW1A 2AA or Birmingham."
+        },
+        id: "test-location",
+        name: "test-location",
+        classes: "govuk-input--width-10"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/round6b/choose-a-test-centre"
+      }) }}
+  </div>
+</div>
+{% endblock %}

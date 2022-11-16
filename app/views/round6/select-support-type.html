@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support type
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round6/do-you-need-support"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Tell us about your support needs</h1>
+    <p>We will share this information with the test centre you select and the examiner who gets assigned to the test slot that you book.</p>
+      <p>This will help ensure that the person taking the test gets the support that they need during the test.</p>
+    <p class="govuk-body">Find out more about the <a
+      href="https://www.gov.uk/driving-test/disability-health-condition-or-learning-difficulty" target="_blank">support you can get
+      during your driving test</a>.</p>
+      <br>
+      <hr>
+      <br>
+      <br>
+      <form class="form" method="post" action="/round6/which-language-do-you-want-to-use">
+      {{ govukCheckboxes({
+        name: "support-type",
+        hint: {
+          text: "Select all that apply"
+        },
+        items: [
+          {
+            value: "I will need to bring a British Sign Language (BSL) interpretor with me",
+            text: "I will need to bring a British Sign Language (BSL) interpretor with me"
+          },
+          {
+            value: "I will need to lip read to understand people speaking to me",
+            text: "I will need to lip read to understand people speaking to me"
+          },
+          {
+            value: "I will need the driving examiner to speak loudly",
+            text: "I will need the driving examiner to speak loudly"
+          },
+          {
+            value: "I will need to bring an adapted vehicle to take my driving test",
+            text: "I will need to bring an adapted vehicle to take my driving test"
+          },
+          {
+            value: "I will need to stop the car to process questions and instructions",
+            text: "I will need to stop the car to process questions and instructions"
+          },
+          {
+            value: "Examiner to avoid wearing bright colours and strong fragrances",
+            text: "Examiner to avoid wearing bright colours and strong fragrances"
+          },
+          {
+            value: "additional-support-information",
+            text: "I want to share additional information about what I've selected",
+          conditional:{
+            html:'<p class="govuk-hint">Use this space to give us any additional information</p>
+            <textarea class="govuk-textarea" id="more-detail-1" name="more-detail-1" rows="5" aria-describedby="more-detail-hint"></textarea>'
+         }
+        },
+        {
+          value: "support-not-listed-information",
+          text: "I will need a type of support not listed here (please specify)",
+        conditional:{
+          html:'<p class="govuk-hint">Use this space to tell us about other types of support not listed</p>
+          <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint"></textarea>'
+       }
+
+
+          }
+        ]
+      }) }}
+<br>
+<hr>
+<br>
+
+  {{ govukButton({
+    text: "Continue",
+    type: "submit"
+  }) }}
+
+  {{ govukButton({
+    text: "I do not need any additional support",
+    classes: "govuk-button--secondary margin-left-30",
+    href: "/round6/which-language-do-you-want-to-use"
+
+  }) }}
+    </form>
+{% endblock %}
+  </div>
+</div>

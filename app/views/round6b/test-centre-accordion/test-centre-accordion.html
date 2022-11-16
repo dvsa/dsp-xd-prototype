@@ -1,0 +1,89 @@
+{% set testCentres = [
+  {
+    expanded: true,
+    title: "Birmingham (Kings Heath)",
+    distance: "0.5 miles",
+    bookSlotLink: "/round6b/candidate-email-next-test",
+    address: {
+      line1: "955 Alcester Road South",
+      line2: "Birmingham",
+      line3: "B14 5JA"
+    },
+    viewTestCentreLink: "https://maps.google.com/maps?z=16&ie=UTF8&q=loc:52.4061096632158%2C-1.8871960744441676&ll=52.4061096632158%2C-1.8871960744441676",
+    aboutTestCentreLink: "https://www.gov.uk/find-driving-test-centre#results",
+    nextSlot: {
+      date: "Tuesday 8 November",
+      time: "10.30am"
+    }
+  },
+  {
+    title: "Birmingham (South Yardley)",
+    distance: "0.8 miles",
+    bookSlotLink: "/round6b/candidate-email",
+    address: {
+      line1: "Clay Lane",
+      line2: "South Yardley",
+      line3: "B26 1EA"
+    },
+    viewTestCentreLink: "https://maps.google.com/maps?z=16&ie=UTF8&q=loc:52.45396405122026%2C-1.8100977276831327&ll=52.45396405122026%2C-1.8100977276831327",
+    aboutTestCentreLink: "https://www.gov.uk/find-driving-test-centre#results",
+    nextSlot: {
+      date: "Monday 12 December",
+      time: "14.00pm"
+    }
+  },
+  {
+    title: "Redditch",
+    distance: "2.1 miles",
+    bookSlotLink: "/round6b/candidate-email",
+    address: {
+      line1: "Elm Road",
+      line2: "Redditch",
+      line3: "B97 6HJ"
+    },
+    viewTestCentreLink: "https://maps.google.com/maps?z=16&ie=UTF8&q=loc:52.54386605470242%2C-1.8904862273408762&ll=52.54386605470242%2C-1.8904862273408762",
+    aboutTestCentreLink: "https://www.gov.uk/find-driving-test-centre#results",
+    nextSlot: {
+      date: "Friday 19 December",
+      time: "10.30am"
+    }
+  },
+  {
+    title: "Birmingham (Garretts Green)",
+    distance: "3.9 miles",
+    bookSlotLink: "/round6b/candidate-email",
+    address: {
+      line1: "Granby Avenue",
+      line2: "Garretts Green",
+      line3: "B33 0SD"
+    },
+    viewTestCentreLink: "https://maps.google.com/maps?z=16&ie=UTF8&q=loc:52.47269355143227%2C-1.7712844768277223&ll=52.47269355143227%2C-1.7712844768277223",
+    aboutTestCentreLink: "https://www.gov.uk/find-driving-test-centre#results",
+    nextSlot: {
+      date: "Saturday 21 December",
+      time: "13.00pm"
+    }
+  },
+  {
+    title: "Birmingham (Sutton Coldfield)",
+    distance: "4.3 miles",
+    bookSlotLink: "/round6b/candidate-email",
+    address: {
+      line1: "110-116 Boldmere Road",
+      line2: "Sutton Coldfield",
+      line3: "B73 5UB"
+    },
+    viewTestCentreLink: "https://maps.google.com/maps?z=16&ie=UTF8&q=loc:52.547550148707515%2C-1.8412378340490116&ll=52.547550148707515%2C-1.8412378340490116",
+    aboutTestCentreLink: "https://www.gov.uk/find-driving-test-centre#results",
+    nextSlot: {
+      date: "Monday 22 December",
+      time: "9.00am"
+    }
+  }
+] %}
+
+<div class="govuk-accordion" data-module="govuk-accordion">
+  {% for testCentre in testCentres %}
+    {% include './test-centre-section.html' %}
+  {% endfor %}
+</div>

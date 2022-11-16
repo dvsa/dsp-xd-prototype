@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Card details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container" id="payment-screen-new">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <a href="index-2">Cancel</a>
+        <form class="cpms" action="additional-information" method="post">
+
+          <ul class="image-stack is-1">
+            <li class="img"><img src="/public/images/payment/MOTO.png" /></li>
+            <li class="img"><img src="/public/images/payment/MCRD.png" /></li>
+            <li class="img"><img src="/public/images/payment/VISA.gif" /></li>
+            <li class="img"><img src="/public/images/payment/JCBC.gif" /></li>
+            <li class="img"><img src="/public/images/payment/DELT.gif" /></li>
+            <li class="img"><img src="/public/images/payment/ELEC.gif" /></li>
+          </ul>
+          <p class="govuk-body">All fields marked * are mandatory</p>
+          <p class="govuk-body">Amount: <strong>£62.00</strong></p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-10">
+              Card Number*
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-2">
+              Expiry Date*
+            </label>
+            <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text"> / <input
+              class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="width-3">
+              <strong>Security Code*</strong>
+            </label>
+            <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+          </div>
+
+          <button class="govuk-button govuk-!-margin-right-1" data-module="govuk-button">
+            Continue
+          </button>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Reset
+          </button>
+          <ul class="image-stack im-2">
+            <li class="img"><img src="/public/images/payment/mastercard_securecode.gif" /></li>
+            <li class="img"><img src="/public/images/payment/verified_by_visa.gif" /></li>
+            <li class="img"><img src="/public/images/payment/seal.png" /></li>
+          </ul>
+        </form>
+
+      </div>
+    </div>
+
+
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,195 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Your support request has been sent
+        </h1>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+      </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">We will contact you by {{ data['how-contacted'] }} within < X > days.</p>
+
+      <p class="govuk-body">It may be useful to <a href="">print this page</a>.</p>
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key no-border">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value no-border">
+              {{ data['first-names'] }} {{ data['last-names'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions no-border">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key no-border">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value no-border">
+             {{ data['dob-day'] }} <span class="dob-format">{{ data['dob-month'] }}</span>  {{ data['dob-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions no-border">
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Driving licence number
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['dl-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How to contact you
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['how-contacted'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['contact-by-phone'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['contact-by-email'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Test details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Language of test
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['language'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Prefered test centre
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['select-where'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Prefered date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['select-day'] }} <span class="month-ready">{{ data['select-month'] }}</span>  {{ data['select-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+
+      </dl>
+
+      <h2 class="govuk-heading-m">Support requested</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Voiceover on test
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['voiceover'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            British sign language
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['bsl'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional support
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['additional-support'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional support requested
+          </dt>
+          <dd class="govuk-summary-list__value">
+             {{ data['more-detail'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+      </dl>
+    </div>
+</div>
+
+{% endblock %}

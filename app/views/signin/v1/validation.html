@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage theory tests
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  {% include "includes/back.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper" style="padding-top: 0px!important;">
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl" style="margin-bottom: 20px!important;">Verify your identity</h1>
+
+      <div class="govuk-inset-text">
+          Select how you would like to verify your identity using the phone number <span class="govuk-body govuk-!-font-weight-bold">07123456789</span>. 
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <!--
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <p class="govuk-body" style="margin-bottom: 10px!important;">
+              Select how you would like to verify your identity using the phone number 07123456789.
+            </p>
+          </legend>
+          -->
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Text me a code 
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Call me 
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div>
+        <p style="padding: 0 0 0.2em 0;"></p>
+        <a href="code.html"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+      </div>
+
+      <p style="padding: 0 0 0em 0;"></p>
+
+      <p><a href="#">Update phone number</a></p>
+
+      <!--
+
+      <br>
+      <br>
+
+      <div class="govuk-form-group" style="margin-bottom: 10px!important">
+        <h3 class="govuk-heading-m">Problems signing in</h3>
+      </div>
+
+      <div>
+        <ul class="govuk-list">
+          <li><a href="#">I have forgotten my password</a></li>
+          <li><a href="#">I have forgotten my Government Gateway user ID</a></li>
+          <li><a href="#">I have forgotten my Government Gateway user ID and password</a></li>
+        </ul>
+      </div>
+
+      <p style="padding: 0 0 2em 0;"></p>
+
+      <p><a href="#">Get help with this page</a></p>
+
+      -->
+
+    </div>
+
+  </div>
+
+  </main>
+</div>
+
+
+{% endblock %}
+
+
+

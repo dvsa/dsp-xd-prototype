@@ -1,0 +1,133 @@
+#test-123 {
+  display: flex;
+  justify-content: left;
+  font-family: "GDS Transport", arial, sans-serif;
+}
+
+#previousMonth, #nextMonth {
+  width: 75px;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: large;
+}
+
+#header {
+  background-color: #EFEFEF;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  vertical-align: bottom;
+}
+
+#monthDisplay {
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+#container {
+  width: 770px;
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: black;
+  text-align: center;
+}
+
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.padding {
+  background-color: white;
+}
+
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  box-sizing: border-box;
+  background-color: #EFEFEF;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.withSlots {
+  background-color: white;
+  border: 2px solid black;
+}
+
+.slotCounter, .slotText {
+  text-align: center;
+  vertical-align: bottom;
+  font-weight: bold;
+}
+
+.slotText {
+  color: #1D70B8;
+}
+
+
+.slotCounter {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.slotCounter span {
+  width: 50px;
+  background-color: #1D70B8;
+  color: white;
+  padding: 10px;
+}
+
+// Hover state
+
+.withSlots:hover {
+  cursor: pointer;
+  background-color: #1D70B8;
+  color: white;
+}
+
+.withSlots:hover .slotText {
+  color: white;
+}
+
+.withSlots:hover .slotCounter span {
+  color: white;
+  background-color: white;
+  color: #1D70B8;
+}
+
+// Selected state
+
+.withSlots.selected {
+  background-color: #1D70B8;
+  color: white;
+}
+
+.withSlots.selected .slotText {
+  color: white;
+}
+
+.withSlots.selected .slotCounter span {
+  color: white;
+  background-color: white;
+  color: #1D70B8;
+}

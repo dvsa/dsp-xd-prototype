@@ -1,0 +1,295 @@
+<html lang="en">
+
+    <head>
+
+      <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+      <style id="common">
+        @font-face {
+            font-family: 'SegoeUI';
+            src: url(https://dsukstetbb2c001.b2clogin.com/static/tenant/templates/fonts/segoeui.WOFF);
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'SegoeUI';
+            src: url(https://dsukstetbb2c001.b2clogin.com/static/tenant/templates/fonts/segoeui_bold.WOFF);
+            font-weight: bold;
+        }
+        .buttons #cancel:before {
+            content: url(https://dsukstetbb2c001.b2clogin.com/static/tenant/templates/images/left-arrow.svg);
+        }
+      </style>
+
+      <style>
+
+
+        .companyLogo {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: 70px;
+        margin: 0 auto;
+        display: block;
+        vertical-align: middle;
+        border: 0;
+        box-sizing: border-box;
+        text-align: center;
+        }
+
+        .container {
+        text-align: center;
+        width: 100%;
+        display: table;
+        height: 100vh;
+        padding: 0;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        }
+
+        .window {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        max-width: 470px;
+        width: 100%;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        }
+
+        .title {
+        display: block;
+        text-align: left;
+        font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        background-attachment: fixed;
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 20px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        }
+
+        .panel {
+        padding: 40px 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 100%;
+        background-color: #fff;
+        border-color: #ddd;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block;
+        text-align: center;
+        height: 390px;
+        width: 470px;
+        }
+
+        .input {outline: 0;
+        background-color: #fff!important;
+        background-image: none!important;
+        border-radius: .5rem!important;
+        color: #555;
+        display: inline-block;
+        font-size: 1em;
+        line-height: 1.42857143;
+        padding: 6px 20px;
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s!important;
+        -webkit-appearance: none;
+        border: 1px solid #605e5c;
+        font-family: inherit;
+        margin: 0;
+        font: inherit;
+        box-sizing: border-box;
+        text-align: left;
+
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        text-align: start;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        }
+
+        .unified_container .row .panel-default #api .localAccount .entry .buttons button {
+        background-image: none;
+        background-color: #296ec6;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 400;
+        height: inherit;
+        line-height: 1.3333333;
+        margin-top: 2rem;
+        margin-right: 0;
+        margin-bottom: 1.2rem;
+        margin-left: 0;
+        padding: 10px 16px;
+        text-align: center;
+        touch-action: manipulation;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: inherit;
+        -moz-user-select: none;
+        -ms-touch-action: manipulation;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        color: #fff;
+        width: 63%;
+        box-shadow: 0 0 30px 0 #dae1f7;
+        }
+
+        .buttons button:not([aria-disabled=true]) {
+        opacity: 1;
+        }
+
+        .buttons button {
+        margin: 0 auto;
+        width: 60%;
+        height: 50px;
+        background-color: #296ec6;
+        border-radius: .5rem;
+        border: none;
+        color: #fff;
+        font-size: 1em;
+        margin-top: 10px;
+        }
+
+        button, input, select, textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        }
+
+        button, html input[type=button], input[type=reset], input[type=submit] {
+        -webkit-appearance: button;
+        cursor: pointer;
+        }
+
+        button, select {
+        text-transform: none;
+        }
+
+        button {
+        overflow: visible;
+        }
+
+        button, input, optgroup, select, textarea {
+        margin: 0;
+        font: inherit;
+        color: inherit;
+        }
+        * {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+        }
+
+        button {
+        appearance: auto;
+        -webkit-writing-mode: horizontal-tb !important;
+        text-rendering: auto;
+        color: -internal-light-dark(black, white);
+        letter-spacing: normal;
+        word-spacing: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: center;
+        align-items: flex-start;
+        cursor: default;
+        background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+        box-sizing: border-box;
+        margin: 0em;
+        font: 400 13.3333px Arial;
+        padding: 1px 6px;
+        border-width: 2px;
+        border-style: outset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+        }
+
+        body {
+        font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        background-attachment: fixed;
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        }
+
+        .cancel {
+        text-align: left;
+        float: right;
+        position: absolute;
+        padding-top: 0px;
+        }
+
+    </style>
+
+    </head>
+
+    <body background="https://dsukstetbb2c001.b2clogin.com/static/tenant/templates/backgrounds/1-1.png">
+
+    <div class="window">
+                    
+        <div class="panel">
+
+            <div class="cancel" style="text-align: left;">
+                <a href="signin.html" style="color: #333;text-decoration: none;"><img src="https://dsuksuatihttcb2c001.b2clogin.com/static/tenant/templates/images/left-arrow.svg"> &nbsp; Cancel</a>
+            </div> 
+                
+            <img class="companyLogo" src="https://dsukstetbb2c001.b2clogin.com/static/tenant/templates/images/logo.svg" alt="Company Logo">
+
+            <br>
+
+            <div style="padding-bottom: 2px;text-align: left">
+                <p>To verify your identity we can either call you on this <br>telephone number or send a code in a text message (SMS).</p>
+            </div> 
+
+            <div style="padding-bottom: 2px;">
+                <p>XXX-XXX-XX123</p>
+            </div> 
+
+            <div class="buttons" style="padding-bottom: 10px;">
+                <a href="code.html"><button style="height: 50px;width: 200px;">Text me a code</button></a>
+            </div> 
+
+            <div class="buttons">
+                <a href="#"><button style="height: 50px;width: 200px;">Call me</button></a>
+            </div> 
+
+        </div>  
+
+    </div>                                        
+
+    </body>
+
+</html>

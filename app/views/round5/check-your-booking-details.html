@@ -1,0 +1,195 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your booking details
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round5/candidate-email"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" id="checkyouranswers">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your booking details</h1>
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Name"
+          },
+          value: {
+            text: "John Robert Smith"
+          },
+          classes: "govuk-summary-list__row--no-actions govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Date of birth"
+          },
+          value: {
+            text: "5 January 1978"
+          },
+          classes: "govuk-summary-list__row--no-actions govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Driving licence number"
+          },
+          value: {
+            text: "DHILL654FTR389B"
+          },
+          classes: "govuk-summary-list__row--no-actions"
+        },
+        {
+          key: {
+            text: "Email address"
+          },
+          value: {
+            text: "johnsmith@email.com"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round5/candidate-email",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">Test details</h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Test type"
+          },
+          value: {
+            text: "Car"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round5/which-test-are-you-booking",
+                text: "Change",
+                visuallyHiddenText: "test type"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Cost"
+          },
+          value: {
+            text: "£62.00"
+          },
+          classes: "govuk-summary-list__row--no-actions"
+        },
+        {
+          key: {
+            text: "Test time and date"
+          },
+          value: {
+            text: "8:00am, 2 June 2020"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round5/choose-test-date-and-time",
+                text: "Change",
+                visuallyHiddenText: "test type"
+              }
+            ]
+          },
+          classes: "govuk-summary-list--no-border"
+        },
+        {
+          key: {
+            text: "Location of test"
+          },
+          value: {
+            html: '<span class="govuk-!-font-weight-bold">Pearson Professional Centre Swansea</span><br>Grove House, <br>3 Grove Pl,<br> Swansea SA1 5DF'
+          },
+          actions: {
+            items: [
+              {
+                href: "/round5/choose-a-test-centre",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+
+        },
+        
+        {
+          key: {
+            text: "Language of test"
+          },
+          value: {
+            text: "English"
+          },
+          actions: {
+            items: [
+              {
+                href: "/round5/which-language-do-you-want-to-use",
+                text: "Change",
+                visuallyHiddenText: "language of test"
+              }
+            ]
+          }
+        },
+        {
+          key: {
+            text: "Support requested"
+          },
+          value: {
+            html: '
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>Support options you selected would show here*</li>
+              <li>Support options you selected would show here*</li>
+              <li>Any other info you typed into the free text box would also be displayed here, for your reference*</li>
+            </ul>
+           '
+          },
+          classes: "govuk-summary-list__row--no-actions",
+          actions: {
+            items: [
+              {
+                href: "/round5/select-support-type",
+                text: "Change",
+                visuallyHiddenText: "email address"
+              }
+            ]
+          }
+        }
+      ]
+    }) }}
+
+    {{ govukWarningText({
+      text: "You must pay within 15 minutes. If you take longer, you'll lose your time slot and might still be charged. If this happens, you need to book your driving test again and might not get the time you want.",
+      iconFallbackText: "Warning"
+    }) }}
+
+    {{ govukButton({
+      text: "Continue and pay",
+      href: "/round5/card-payment/card-details"
+    }) }}
+  </div>
+</div>
+{% endblock %}

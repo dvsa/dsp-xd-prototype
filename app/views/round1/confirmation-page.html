@@ -1,0 +1,238 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-bottom-7">
+    <div class="govuk-grid-column-full">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Driving test booking confirmed
+        </h1>
+        <span style="font-size: 28px; font-weight: 700;"></span>
+        <div class="govuk-panel__body">
+          Your booking reference is important<br><strong>HDJ2123F</strong><br>Keep it safe
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-row" id="confirmation-page">
+
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body"><strong>Keep your booking reference safe</strong>. You'll need it to check, cancel or reschedule this test. Consider taking a screenshot, or <a href="">print this page</a>.</p>
+
+    <!--  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+              John Robert Smith
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Driving licence number
+          </dt>
+          <dd class="govuk-summary-list__value">
+             DHILL654FTR389B
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Car
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Test time
+          </dt>
+          <dd class="govuk-summary-list__value timeslot">
+             8:00am
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of test
+          </dt>
+          <dd class="govuk-summary-list__value">
+             2 June 2020
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Test location
+          </dt>
+          <dd class="govuk-summary-list__value">
+             Pearson Centre - Swansea
+          </dd>
+          <dd class="govuk-summary-list__actions">
+
+          </dd>
+        </div>
+      </dl>-->
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                ADI Part 1
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test time and date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                 8:00am, 2 June 2020
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">Pearson Professional Centre Swansea</span><br>Grove House, <br>3 Grove Pl,<br> Swansea SA1 5DF
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row" style="display: none;">
+              <dt class="govuk-summary-list__key">
+                Test centre
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                On-screen language
+              </dt>
+              <dd class="govuk-summary-list__value">
+                English / Welsh<br>
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                British Sign Language
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Yes / No
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Voiceover language
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No / Welsh / English
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+          </dl>
+          <h2 class="govuk-heading-l">Important</h2>
+          <p class="govuk-body">The person taking the test must:</p>
+          <ol class="govuk-list govuk-list--number">
+            <li>arrive 15 minutes before the test start time</li>
+            <li>bring their driving licence</li>
+          </ol>
+          <p class="govuk-body">(Old-style, paper licence holders should also bring a valid passport, or other photo-ID)</p>
+          <div class="section-break govuk-!-margin-bottom-9"></div>
+
+          <h2 class="govuk-heading-l">Security at the test centre</h2>
+          <p class="govuk-body">All test centres are security monitored.</p>
+          <p class="govuk-body">As you enter the test room, you'll be checked for items that could be used to cheat.</p>
+          <p class="govuk-body">Your test will not go ahead if you do not allow this check.</p>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              It is illegal to cheat in a driving test. You can be sent to prison and banned from driving.
+            </strong>
+          </div>
+          <div class="section-break govuk-!-margin-bottom-9"></div>
+
+          <h2 class="govuk-heading-l">Personal belongings</h2>
+          <p class="govuk-body">When you arrive at the test centre, all personal items must be placed in the secure locker provided. These items include:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>food and drink</li>
+            <li>ear-pieces or headphones</li>
+            <li>mobile phones and other electronic devices</li>
+            <li>hats, bags and coats</li>
+            <li>watches</li>
+            <li>books and revision notes</li>
+          </ul>
+          <p class="govuk-body">If you are found to have any of these items in the test room:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your test may be stopped and voided</li>
+            <li>you may be asked to leave</li>
+            <li>the test fee may not be refunded</li>
+          </ul>
+          <div class="section-break govuk-!-margin-bottom-9"></div>
+
+          <h2 class="govuk-heading-l">No waiting facilities</h2>
+          <p class="govuk-body">Test centres have no waiting facilities for any adults or children accompanying candidates.</p>
+
+          <h2 class="govuk-heading-l">Prepare for the test</h2>
+          <p class="govuk-body">Learn more about preparing for a car driving test including free practice tests</p>
+          <p class="govuk-body">here: <a href="http://www.gov.uk/driving-test/revision-and-practice">http://www.gov.uk/driving-test/revision-and-practice</a></p>
+
+          <h2 class="govuk-heading-l">Checking, moving or cancelling this driving test</h2>
+          <p class="govuk-body">driving tests can be moved or cancelled up to 3 days before without penalty. If this booking is changed or cancelled after [date of no refund] no refund will be made.</p>
+          <p class="govuk-body">Check the details of this test here: <a href="http://www.gov.uk/check-driving-test">http://www.gov.uk/check-driving-test</a></p>
+          <p class="govuk-body">Reschedule the test here: <a href="http://www.gov.uk/change-driving-test">http://www.gov.uk/change-driving-test</a></p>
+          <p class="govuk-body">Cancel this test here: <a href="http://www.gov.uk/cancel-driving-test">http://www.gov.uk/cancel-driving-test</a></p>
+          <div class="section-break govuk-!-margin-bottom-9"></div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check answers (NSA)
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="standard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your details</h1>
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+          John Robert Smith
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+          <a class="govuk-link" href="008-candidate-details">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+          03 17 1988
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Driving licence number
+        </dt>
+        <dd class="govuk-summary-list__value">
+           DHIL783497543894
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Telephone
+        </dt>
+        <dd class="govuk-summary-list__value">
+          07898672543
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="provide-phone-number-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+           john.smith@email.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="008-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Consent to leave you phone messages
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+           Yes / No
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+          <a class="govuk-link" href="ok-to-contact-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+    </dl>
+
+    <h2 class="govuk-heading-m">Test details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Test type
+        </dt>
+        <dd class="govuk-summary-list__value">
+           ADI Part 1
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          On-screen language
+        </dt>
+        <dd class="govuk-summary-list__value">
+           English / Cymraeg (Welsh)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="007-langauge-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Preferred location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['select-where'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="select-date">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Preferred date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['select-day'] }} <span class="month-ready">{{ data['select-month'] }}</span>  {{ data['select-year'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="select-date">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <h2 class="govuk-heading-m">Support details</h2>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Support requested
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes / No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="do-you-need-support-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Support types you selected
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Sign language (on-screen)<br>
+            Sign language (interpreter)<br>
+            Voiceover<br>
+            Extra time<br>
+            Test question modifier<br>
+            Reading support with answer entry<br>
+            Other
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="select-support-type-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Additional request
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['more-detail'] }}<br>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="tell-us-what-support-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Voiceover language
+          </dt>
+          <dd class="govuk-summary-list__value">
+          English / Cymraeg (Welsh)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Translator language
+          </dt>
+          <dd class="govuk-summary-list__value">
+          French [from free text field]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="flt-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Support details you added
+          </dt>
+          <dd class="govuk-summary-list__value">
+          The extra support i need is...[from free text field]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="tell-us-what-support-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </div>
+
+      <div class="govuk-summary-list__row">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred time for test
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Monday mornings...[from free text field]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="prefered-day-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred locations for test
+          </dt>
+          <dd class="govuk-summary-list__value">
+            South London....[from free text field]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="prefered-location-change">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </div>
+
+    </dl>
+
+    <a href="as-confirmation-page" class="govuk-button">Continue</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form action="prefered-location">
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset govuk-!-margin-bottom-4" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-heading-xl">
+        Is there a day and time that's best for you?
+      </h1>
+    </legend>
+    <p class="govuk-body">Tell us if there's a particular time of day, or day of the week that's better for you. We will try to arrange your test around these choices.</p>
+    <p class="govuk-body">If you are flexible about when you take your test, select 'I will decide this later'.</p>
+    <div id="contact-hint" class="govuk-hint">
+      Select one option.
+    </div>
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="decidelate" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          I want a particular time or day
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+
+
+        <div class="grid-row">
+          <div class="column-full">
+            <div class="form-date">
+              <div class="govuk-form-group">
+
+                <div id="more-detail-hint" class="govuk-hint">
+                Enter more details (optional)
+                </div>
+
+                <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="4000">
+                  <textarea class="govuk-textarea govuk-js-character-count" id="more-detail" name="wheresbest" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    You have 4000 characters remaining
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="decidelate" type="radio" value="I'll decide later" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          I will decide this later
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+  <button class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</div>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}
