@@ -1,0 +1,46 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+<div id="payment-screen">
+<header class="header">
+	Customer Payment Management System
+</header>
+
+<div class="govuk-grid-row">
+	<br><br>
+	<div class="govuk-grid-column-full">
+		<div class="govuk-form-group">
+			<h1>Online Payments</h1>
+			<p>Do not press back or refresh. This may cause payment delays.</p>
+			<hr>
+			<p>Amount £23.00</p>
+
+			<form action="confirmation-page" method="POST">
+				<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+					<label for="code"><b>Email</b></label>
+					<input type="text" placeholder="Enter email" id="email" required="" value="{{ data['email-address'] }}">
+					<br>
+					<label for="card"><b>Card Number</b></label>
+					<input type="text" pattern="[0-9]*" placeholder="Enter Card Number" id="card" required="">
+					<br>
+					<label for="expiry"><b>Expiry Date</b></label>
+					<input type="text" pattern="[0-9]*" placeholder="Enter Expiry Date" id="expiry" required="">
+					<br>
+					<label for="code"><b>Security Code</b></label>
+					<input type="text" pattern="[0-9]*" placeholder="Enter code" id="code" required="">
+					<br><br>
+					<button id="submit" type="submit" role="button" draggable="false">
+						Make Payment
+					</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Card holder details
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container" id="payment-screen-new">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <a href="/round6b/check-your-booking-details">Cancel</a>
+        <form class="cpms" method="post">
+
+          <div class="govuk-form-group">
+
+            <h2 class="govuk-heading-m">Additional Information</h2>
+            <p class="govuk-body">All fields marked * are mandatory</p>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-20">
+                <strong>Cardholder's Name*</strong>
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="width-20">
+                E-Mail
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="email">
+            </div>
+
+            <div class="govuk-form-group govuk-!-margin-bottom-4">
+              <label class="govuk-label" for="width-20">
+                Confirm E-Mail
+              </label>
+              <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="email">
+            </div>
+
+            <a href="/round6b/card-payment/payment-confirmation" class="govuk-button govuk-!-margin-right-1">
+              Continue
+            </a>
+
+            <a href="" class="govuk-button govuk-!-margin-right-1">
+              Reset
+            </a>
+
+            <a href="/round6b/card-payment/card-details" class="govuk-button">
+              Back
+            </a>
+
+
+        </form>
+
+      </div>
+    </div>
+
+
+  </main>
+</div>
+
+{% endblock %}

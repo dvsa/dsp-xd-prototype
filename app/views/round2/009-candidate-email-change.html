@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" id="candidates-email">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="notification-alert">You can change your previous response here or <a href="check-your-answers">go back and keep it</a>.<br>
+      </div>
+      <h1 class="govuk-heading-xl">Email of the person taking the driving test</h1>
+        <p class="govuk-body">We need an email address to send a booking confirmation and a payment receipt.</p>
+        <p class="govuk-body">Make sure this is the email for the person taking the driving test. </p>
+
+        <form class="form" action="007-langauge" method="post">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email-address">
+              Email address
+            </label>
+            <input class="govuk-input" id="email-address" name="email-address" type="email">
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email-address">
+              Confirm email address
+            </label>
+            <input class="govuk-input" id="email-address" name="email-address" type="email">
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">Change and continue</button>
+          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Cancel and keep your selection</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

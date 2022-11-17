@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" id="candidate-details">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Who is taking the driving test?</h1>
+      <p>Tell us the driving license details of the person taking the test. The details must be exactly the same as on the driving license. </p>
+
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+
+          </ul>
+        </div>
+      </div>
+      <form action="candidate-email" method="post" class="form">
+        <div class="govuk-form-group">
+          <label class="govuk-heading-m" for="event-name">
+            First and middle names
+          </label>
+          <p class="govuk-body">Enter the first and any middle names of the person taking the test. </p>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Error message text
+          </span>
+          <p class="govuk-hint">See section 2 of the driving licence</p>
+          <input class="govuk-input govuk-!-margin-bottom-3" id="first-second-names" name="first-names" type="text" value="">
+          <details class="govuk-details ]" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text govuk-link">
+                See example
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <img class="dl-exmaple" src="/public/images/round4/item2.png" />
+            </div>
+          </details>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-heading-m" for="event-name">
+            Last name
+          </label>
+          <p>Enter the last name of the person taking the test.</p>
+
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Error message text
+          </span>
+          <p class="govuk-hint">See section 1 of the driving licence</p>
+          <input class="govuk-input govuk-!-margin-bottom-3" id="last-names" name="last-names" type="text" value="">
+          <details class="govuk-details govuk-!-margin-bottom-7" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text govuk-link">
+                See example
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <img  class="dl-exmaple" src="/public/images/round4/item1.png" />
+            </div>
+          </details>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-heading-m" for="event-name">
+            Driving licence number
+          </label>
+          <p>Enter the 16-digit driving licence number of the person taking the test.</p>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Error message text
+          </span>
+          <p class="govuk-hint">See section 5 of the driving licence</p>
+          <input class="govuk-input govuk-!-margin-bottom-3" id="dl-number" name="dl-number" type="text" value="">
+          <details class="govuk-details govuk-!-margin-bottom-7" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text govuk-link">
+                See example
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <img class="dl-exmaple" src="/public/images/round4/item3.png" />
+            </div>
+          </details>
+        </div>
+        <div class="govuk-date-input">
+          <label class="govuk-heading-m" for="event-name">
+            Date of birth
+          </label>
+          <p class="govuk-body">Enter the date of birth of the person taking the test.</p>
+          <span id="passport-issued-hint" class="govuk-hint">
+            For example, 12 11 2007
+          </span>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Error message text
+          </span>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group" id="dob">
+              <label class="govuk-label govuk-date-input__label">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" value="">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" name="dob-month" type="text" value="" id="dob-month">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" name="dob-year" type="text" value="" id="dob-year">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="govuk-form-group govuk-!-margin-bottom-9">
+          <label class="govuk-heading-m" for="event-name">
+            Instructor reference number
+          </label>
+            <p>Enter the reference number from your instructor registration email.</p>
+          <span class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Error message text
+          </span>
+          <input class="govuk-input govuk-!-margin-bottom-3" id="" name="" type="text" value="">
+        </div> -->
+        <a href="/assisted1/nsa/candidate-email" class="govuk-button">Continue</a>
+
+
+      </form>
+    </div>
+</div>
+
+{% endblock %}

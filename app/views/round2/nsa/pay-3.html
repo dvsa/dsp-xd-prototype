@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container" id="payment-screen-new">
+<main class="govuk-main-wrapper " id="main-content" role="main">
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="index-2">Cancel</a>
+    <div class="cpms" action="pay-2" method="post">
+
+      <h1 class="govuk-heading-m">Payment Confirmation Page</h1>
+      <p class="govuk-body">You are about to make a payment for the transaction shown below. Please check that these details are correct and then either click on the "Make Payment" button to continue with your payment or click on "Back" if any details need to be amended.</p>
+      <p class="govuk-body">Once you click on "Make Payment" your transaction will be authorised on-line. This will typically take about six seconds but various factors can affect the actual time taken. Please refrain from clicking on any other browser buttons or navigating to other sites while this process takes place. If the process stops responding for any reason then we recommend that you simply close your browser.</p>
+
+      <div class="pay-inset">
+        <h2 class="govuk-heading-m">Purchase Details</h2>
+        <p class="govuk-body">Please check that the purchase details below are correct.</p>
+        <table>
+<caption>
+</caption><colgroup>
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+</colgroup>
+<thead>
+<tr>
+<th>Description</th>
+<th>Reference</th>
+<th>Name</th>
+<th>Price</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="3">Total</td>
+<td>£23.00</td>
+</tr>
+</tfoot>
+<tbody>
+  <tr>
+    <td>Category B - Car test</td>
+    <td>0924-101617-CF915D</td>
+    <td>
+    </td>
+    <td> £23.00</td>
+  </tr>
+  </tbody>
+  </table>
+</div>
+<div class="pay-inset govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-m">Card Details</h2>
+  <p class="govuk-body">Please check that your card details are correct</p>
+  <dl class="scp_card_details">
+<dt class="scp_card_details scp_card_details_cardNumber">Card Number</dt>
+<dd class="scp_card_details scp_card_details_cardNumber">************0000</dd>
+<dt class="scp_card_details scp_card_details_cardholderName">Cardholder</dt>
+<dd class="scp_card_details scp_card_details_cardholderName">testing testing</dd>
+<dt class="scp_card_details scp_card_details_expiryDate">Expiry Date</dt>
+<dd class="scp_card_details scp_card_details_expiryDate">12/20</dd>
+</dl>
+</div>
+
+  <a href="confirmation-nsa" class="govuk-button govuk-!-margin-right-1">
+    Continue
+  </a>
+
+  <a href="" class="govuk-button govuk-!-margin-right-1">
+    Reset
+  </a>
+
+  <a href="pay-1" class="govuk-button">
+    Back
+  </a>
+
+
+</div>
+
+  </div>
+</div>
+
+
+</main>
+</div>
+
+{% endblock %}

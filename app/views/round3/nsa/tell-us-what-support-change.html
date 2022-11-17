@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-alert">You can tell us more about the support you need here. Or you <a href="cya">can use the information you have already provided</a>.<br>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            If you select 'Continue' we will need to contact you to find out how we can help. You won't be able to book your test online now.
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Tell us what support you need</h1>
+      <p class="govuk-body">Accessible support is available to help make your driving test more comfortable.</p>
+      <p class="govuk-body">You can provide more information about what you need here.</p>
+      <p class="govuk-body">Select 'Continue' if you would prefer to talk about this when we contact you.</p>
+      <p class="govuk-body">Some types of support need time to arrange. This means you may not be able to book online now.</p>
+      <form action="staying-nsa" class="govuk-!-padding-bottom-7">
+        <div class="govuk-form-group">
+          <span id="more-detail-hint" class="govuk-hint">
+            Tell us what you need (optional)
+          </span>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="cya" class="govuk-button govuk-button--secondary">Cancel and use information already provided</a>
+
+      </form>
+
+
+</div>
+
+{% endblock %}

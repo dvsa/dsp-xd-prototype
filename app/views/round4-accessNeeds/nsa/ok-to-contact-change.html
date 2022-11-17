@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-alert">You can change your mind about this or <a href="cya">keep your existing choice</a>.<br>
+        </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <form class="" action="cya" method="post">
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Can we leave telephone messages if we can't reach you?
+      </h1>
+    </legend>
+    <p class="govu-body">
+  </p>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-pay" name="oktocontact" type="radio" value="Yes">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="oktocontact" type="radio" value="No">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          No
+        </label>
+      </div>
+
+    </div>
+
+  </fieldset>
+</div>
+<button id="checknumberadded" class="govuk-button govuk-!-margin-top-2" data-module="govuk-button">Confirm change and continue</button>
+<a href="cya" class="govuk-button govuk-button--secondary govuk-!-margin-left-2 govuk-!-margin-top-2">Cancel and keep existing choice</a>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

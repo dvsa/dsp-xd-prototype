@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Who is taking the test
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "/round5/what-you-need-to-book"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Who is taking the driving test?</h1>
+
+    <p class="govuk-body">
+      Enter the driving licence details of the person taking the test.
+    </p>
+
+    <p class="govuk-body">
+      These details are checked and used to show information about the candidate's availability and any test history.
+    </p>
+
+    <p class="govuk-body">
+      It's important the information is entered exactly as it looks on the driving licence.
+    </p>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form action="" method="post" class="form">
+      <!-- First and middle names -->
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <label class="govuk-heading-m" for="event-name">
+              First and middle names
+            </label>
+            <p class="govuk-body">Enter the first and any middle names of the person taking the test.</p>
+            <p class="govuk-hint">See section 2 of the driving licence</p>
+            <input class="govuk-input govuk-!-margin-bottom-3" id="first-second-names" name="first-names" type="text"
+              value="">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body"><strong>Where to find the first and middle names</strong></p>
+          <img class="dl-exmaple" src="/public/images/round5/item2.png" />
+        </div>
+      </div>
+
+      <!-- Last name -->
+      <div class="grey-line"></div>
+      <br>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <label class="govuk-heading-m" for="event-name">
+              Last name
+            </label>
+            <p>Enter the last name of the person taking the test.</p>
+
+            <p class="govuk-hint">See section 1 of the driving licence</p>
+            <input class="govuk-input govuk-!-margin-bottom-3" id="last-names" name="last-names" type="text" value="">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body"><strong>Where to find the last name</strong></p>
+          <img class="dl-exmaple" src="/public/images/round5/item1.png" />
+        </div>
+      </div>
+
+      <!-- Driving licence number -->
+
+      <div class="grey-line"></div>
+      <br>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group govuk-!-margin-bottom-9">
+            <label class="govuk-heading-m" for="event-name">
+              Driving licence number
+            </label>
+            <p>Enter the 16-digit driving licence number of the person taking the test.</p>
+            <p class="govuk-hint">See section 5 of the driving licence</p>
+            <input class="govuk-input govuk-!-margin-bottom-3" id="dl-number" name="dl-number" type="text" value="">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body"><strong>Where to find the driving licence number</strong></p>
+          <img class="dl-exmaple" src="/public/images/round5/item3.png" />
+        </div>
+      </div>
+
+      <div class="grey-line"></div>
+
+      <br>
+      <br>
+      {{ govukButton({
+      text: "Continue",
+      href: "/round5/which-test-are-you-booking"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}

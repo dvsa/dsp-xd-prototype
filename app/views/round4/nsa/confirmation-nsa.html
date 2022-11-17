@@ -1,0 +1,138 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row govuk-!-margin-bottom-7">
+
+    <div class="govuk-grid-column-full">
+      <p class="govuk-body"><a href="#">Print this page</a></p>
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Driving test booking confirmed
+        </h1>
+        <span style="font-size: 28px; font-weight: 700;"></span>
+        <div class="govuk-panel__body">
+          Booking reference<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-row" id="confirmation-page">
+
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body-l">We have sent you a confirmation email with more information about your test.</p>
+<br>
+      <p class="govuk-body"><strong>Keep your booking reference safe</strong>. <br>You'll need it to check, cancel or change this test.</p>
+      <p>Find out how to <a href="https://invis.io/9612ZRJRVNER">change or cancel your test</a> </p>
+
+
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test type
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Car
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test time and date
+              </dt>
+              <dd class="govuk-summary-list__value">
+                 8:00am, 2 June 2020
+              </dd>
+              <dd class="govuk-summary-list__actions">
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Test location
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <span class="govuk-!-font-weight-bold">Pearson Professional Centre Swansea</span><br>Grove House, <br>3 Grove Pl,<br> Swansea SA1 5DF
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+
+
+            <div class="govuk-summary-list__row" style="display: none;">
+              <dt class="govuk-summary-list__key">
+                Test centre
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Language of test
+              </dt>
+              <dd class="govuk-summary-list__value">
+                English
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Support requested
+              </dt>
+              <dd class="govuk-summary-list__value">
+
+                 Let me stop the car to hear a question or instruction<br><br>
+                 Give me more time to understand a question or instruction<br><br>
+                 Do not talk during the test unless it is essential
+              </dd>
+              <dd class="govuk-summary-list__actions">
+
+              </dd>
+            </div>
+
+          </dl>
+
+          <h2 class="govuk-heading-l">What to take to your test</h2>
+          <p class="govuk-body">Arrive 15 minutes before the start time.</p>
+
+          <p class="govuk-body">You must take:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>your driving licence</li>
+            <li>your theory pass certificate, if you have it</li>
+            <li>a car - most people use their driving instructor's, but you can <a href="#">use your own car</a> if it meets the rules</li>
+
+          </ul>
+          <p class="govuk-body">(Old-style, paper licence holders should also bring a valid passport, or other photo-ID)</p>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Your test will be cancelled and you will not get your money back if you do not take the right things with you.
+            </strong>
+          </div>
+          <p class="govuk-body">Find out more about <a href="#">what happens during your test.</a></p>
+          <div class="section-break govuk-!-margin-bottom-9"></div>
+          <h2 class="govuk-heading-l">After your test</h2>
+          <p class="govuk-body">We'll send the test results to the email address you booked with.</p>
+
+
+    </div>
+</div>
+
+{% endblock %}

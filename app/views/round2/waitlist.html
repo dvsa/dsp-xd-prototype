@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row" id="checkyouranswers">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Do you want to be notified when new driving test slots become available?</h1>
+<!-- <p>If you save your test choices, we'll use them to offer you driving tests.</p> -->
+    <h2 class="govuk-heading-m">Test choices</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Prefered location
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Within 2 miles of <strong>Swansea</strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="009-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Language of test
+        </dt>
+        <dd class="govuk-summary-list__value">
+          English
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="009-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div><div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Support needed
+        </dt>
+        <dd class="govuk-summary-list__value">
+          British sign langauge
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="009-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Join waitlist
+      </button>
+
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Check other locations
+      </button>
+    </div>  </div>
+</div>
+{% endblock %}

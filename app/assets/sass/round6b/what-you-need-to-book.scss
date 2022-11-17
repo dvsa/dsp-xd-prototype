@@ -1,0 +1,54 @@
+.govuk-back-link-white.govuk-back-link:before {
+  border-color: #ffffff;
+}
+
+.govuk-back-link-white:link, .govuk-back-link-white:visited {
+  color: #ffffff;
+}
+
+.govuk-template-blue__body {
+  margin: 0;
+  background-color: #1d70b8;
+}
+
+.whiteText {
+  color: #ffffff;
+}
+
+.whiteInsetPanel {
+  border-left: 10px solid #ffffff;
+}
+
+.govuk-button-white {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.1875;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  width: 20%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 22px;
+  padding: 8px 10px 7px;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #1d70b8;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 #1d70b8;
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-appearance: none;
+  text-decoration: none;
+}
+
+.govuk-button-white:visited {
+  color: #1d70b8;
+}

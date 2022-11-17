@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="notification-alert">You can search for a test centre location here, or <a href="check-your-answers">go back and keep your previous choice go back and keep it</a>.</div>
+
+      <div class="choose-test-centre-screen">
+        <h1 class="govuk-heading-xl">Find a test centre</h1>
+        <p class="govuk-body">Find your nearest driving test centre.</p>
+        <p class="govuk-body">You can:</p>
+        <ul class="govuk-!-padding-bottom-6">
+          <li class="govuk-body">Get a map and check directions for getting to the centre</li>
+          <li class="govuk-body">check any special instructions for using the centre</li>
+        </ul>
+
+        <div class="">
+          <label class="govuk-label" for="event-name">
+            Enter a postcode or place. For example SW1A 2AA or Birmingham.
+          </label>
+          <input class="govuk-input govuk-!-padding-bottom-5" id="location-val" name="event-name" type="text">
+          <div class="govuk-!-padding-bottom-5"></div>
+          <a href="005-choose-test-centre-change" class="govuk-button">Continue</a>
+          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Cancel and keep your selection</a>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

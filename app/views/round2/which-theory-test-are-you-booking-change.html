@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-alert">You can change the test type or <a href="check-your-answers">go back and keep the last type selected</a>.<br>
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            If you change the test type here, the information previously entered will be replaced with the new details you are about to provide.
+            <br>If you no longer want to change the test type, select 'Cancel and keep original test type'.
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary validate-error" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+
+          </ul>
+        </div>
+      </div>
+
+
+      <h1 class="govuk-heading-xl">Which driving test are you booking?</h1>
+
+
+      <form action="007-langauge" class="govuk-!-margin-bottom-6">
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input validate" id="type-car" name="test-type" type="radio" value="Car">
+            <label class="govuk-label govuk-radios__label" for="changed-name" {{ checked("test-type", "Car") }}>
+              Car
+            </label>
+            <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+               £23
+            </span>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input validate" id="type-bike" name="test-type" type="radio" value="Motorcycle">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2" {{ checked("test-type", "Motorcycle") }}>
+              Motorcycle
+            </label>
+            <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+               £23
+            </span>
+          </div>
+        </div>
+        <button class="govuk-button govuk-!-margin-right-1 validate-btn" data-module="govuk-button">Change and continue</button>
+        <a href="check-your-answers" class="govuk-button govuk-button--secondary">Cancel and keep original test type</a>
+
+      </form>
+      <h2 class="govuk-heading-l">Booking other types of driving tests</h2>
+      <p class="govuk-body">To drive a particular type of vehicle, you need an ‘entitlement’ for that category on your driving licence.</p>
+      <p class="govuk-body">Visit <a href="https://www.gov.uk/driving-licence-categories">driving licence categories for more information</a>.</p>
+    </div>
+</div>
+
+{% endblock %}

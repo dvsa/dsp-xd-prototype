@@ -1,0 +1,224 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Chose a test date and time
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "/round6/choose-a-test-centre"
+}) }}
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/round6/slotCalendar/calendar.css" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/round6/slotCalendar/slotTimes.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Choose a date and time for your test</h1>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body">These are the tests available at <span class="govuk-!-font-weight-bold">Nottingham</span></p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body"><a href="/round6/choose-a-test-centre"
+      class="govuk-link">Change</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l" id="selectADate">Select a date</h2>
+
+    {{ govukInsetText({
+      text: "After you have selected a slot date, all available times for that date will be displayed below the calendar."
+    }) }}
+  </div>
+</div>
+
+<br>
+
+<div class="govuk-grid-row" id="test-123">
+  <div class="govuk-grid-column-two-thirds">
+    <div id="container">
+      <div id="header">
+        <div><button id="previousMonth"><</button></div>
+        <div style="padding-top: 10px;"><span id="monthDisplay"></span></div>
+        <div><button id="nextMonth">></button></div>
+      </div>
+
+      <div id="weekdays">
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thur</div>
+        <div>Fri</div>
+        <div>Sat</div>
+        <div>Sun</div>
+      </div>
+
+      <div id="calendar"></div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 id="dateHeading" class="govuk-heading-l">Select a time</h2>
+
+    {{ govukInsetText({
+      id: "timesHelpInset",
+      text: "All available times for slots will be displayed here."
+    }) }}
+
+    <div id='times' class="govuk-visually-hidden">
+      <div>
+        <h3 class="govuk-heading-m">Morning</h3>
+        <div id="morningTimes"></div>
+      </div>
+      <br>
+      <div>
+        <h3 class="govuk-heading-m">Afternoon</h3>
+        <div id="afternoonTimes"></div>
+      </div>
+
+      <div id="selectAnotherDate">
+        <a href="#header">Select another date</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" method="post" action="/round6/candidate-email">
+      <div class="govuk-form-group">
+      <input class="govuk-input govuk-input--width-50" id="test-centre-name" name="test-centre" value="Nottingham" type="hidden" aria-describedby="test-centre">
+      <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-1" name="test-centre" value="Testing Station" type="hidden" aria-describedby="test-centre">
+      <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-2" name="test-centre" value="Main Road" type="hidden" aria-describedby="test-centre">
+      <input class="govuk-input govuk-input--width-50" id="test-centre-address-line-3" name="test-centre" value="NG16 1JF" type="hidden" aria-describedby="test-centre">
+      </div>
+      <div class="govuk-form-group">
+        <input class="govuk-input govuk-input--width-50" id="slot-date" name="slot-information" value="" type="hidden" aria-describedby="slot-information">
+        <input class="govuk-input govuk-input--width-50" id="slot-time" name="slot-information" value="" type="hidden" aria-describedby="slot-information">
+      </div>
+      <div class="govuk-form-group">
+        <input class="govuk-input govuk-input--width-50" id="slot-price" name="slot-price" value="" type="hidden" aria-describedby="slot-price">
+      </div>
+      {{ govukButton({
+        text: "Continue",
+        type: "submit"
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/round6/slot-calendar/slot-calendar.js"></script>
+  <script src="/public/javascripts/round6/slot-calendar/slot-time-display.js"></script>
+  <script>
+
+    function generateSlot(time, price) {
+      return {
+        time: time,
+        price: price
+      }
+    }
+
+    const slots = {
+      2022: {
+        11: {
+          8: {
+            am: [generateSlot('10:30am', '£62'), generateSlot('11:00am', '£62'), generateSlot('11:30am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:00pm', '£62'), generateSlot('14:00pm', '£62')]
+          },
+          12: {
+            am: [generateSlot('8:00pm', '£75'), generateSlot('9:00pm', '£75'), generateSlot('10:30pm', '£75')],
+            pm: [generateSlot('12:00pm', '£75'), generateSlot('13:30pm', '£75'), generateSlot('15:00pm', '£75')]
+          },
+          14: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          18: {
+            am: [generateSlot('9:00am', '£62'), generateSlot('10:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          21: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          22: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          25: {
+            am: [generateSlot('9:00am', '£62'), generateSlot('10:30am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          26: {
+            am: [generateSlot('9:00am', '£75')],
+            pm: [generateSlot('12:30pm', '£75'), generateSlot('13:30pm', '£75'), generateSlot('15:00pm', '£75')]
+          }
+        },
+        12: {
+          8: {
+            am: [generateSlot('10:30am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'),generateSlot('14:00pm', '£62')]
+          },
+          12: {
+            am: [generateSlot('8:00pm', '£75')],
+            pm: [generateSlot('12:00pm', '£75'), generateSlot('13:30pm', '£75'), generateSlot('15:00pm', '£75')]
+          },
+          14: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          17: {
+            am: [generateSlot('9:00am', '£75')],
+            pm: [generateSlot('12:30pm', '£75'), generateSlot('13:30pm', '£75'), generateSlot('15:00pm', '£75')]
+          },
+          21: {
+            am: [generateSlot('9:00am', '£62'), generateSlot('11:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          22: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          },
+          24: {
+            am: [generateSlot('9:00am', '£62'), generateSlot('10:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£75'), generateSlot('13:30pm', '£75'), generateSlot('15:00pm', '£75')]
+          },
+          26: {
+            am: [generateSlot('9:00am', '£62')],
+            pm: [generateSlot('12:30pm', '£62'), generateSlot('13:30pm', '£62'), generateSlot('15:00pm', '£62')]
+          }
+        }
+      }
+    }
+
+    const slotTimeDisplay = new SlotTimeDisplay()
+    const calendarBuilder = new SlotCalendar(slots, (date, slots) => slotTimeDisplay.showTimeSlots(date, slots))
+
+    calendarBuilder.buildCalendar()
+  </script>
+{% endblock %}

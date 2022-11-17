@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<a href="#" class="govuk-back-link">Back</a>
+  <div class="govuk-grid-row screen-search-test-centres">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Where do you want to sit your driving test?
+      </h1>
+      <div class="govuk-form-group grey-bounding">
+        <label class="govuk-label" for="event-name">
+          You can search for driving test centres by entering a postcode, a place or region
+        </label>
+        <input class="govuk-input" id="location-val" name="event-name" type="text">
+        <a class="govuk-button find-test-centre" data-module="govuk-button">
+          Find
+        </a>
+      </div>
+      <p class="govuk-body results-meta">Displaying <span class="increment govuk-!-font-weight-bold"></span> results for <span class="location-selected govuk-!-font-weight-bold"></span>. See results <a href="map" class="govuk-link">on a map</a>.</p>
+
+      <br />
+      <a class="" id="convertdistance">Show kilometers</a>
+      <div id="results"></div>
+
+      <a href="appointment" class="govuk-button" data-module="govuk-button" id="submit-location">
+        Continue
+      </a>
+    </div>
+    <br />
+
+</div>
+
+{% endblock %}
+    <script type='text/javascript' src='/public/javascripts/markers.js'></script>

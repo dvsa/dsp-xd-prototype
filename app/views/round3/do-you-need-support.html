@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Get support on your driving test</h1>
+
+      <form class="form" action="/support-journeys/ns-journey-v5/select-support-type" method="post">
+
+        <p class="govuk-body">You can get support on your driving test if you have a:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>disability</li>
+            <li>health condition</li>
+            <li>learning difficulty</li>
+          </ul>
+
+
+
+        <p class="govuk-body">Find out more about the <a href="https://www.gov.uk/driving-test/disability-health-condition-or-learning-difficulty">support you can get on your driving test</a>.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="support-filter-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Do you want support on your driving test?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa" name="doyouwantsupport" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="support-filter">
+                  Yes
+                </label>
+              </div>
+            <!--  <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa-2" name="doyouwantsupport" type="radio" value="cont-nsa">
+                <label class="govuk-label govuk-radios__label" for="support-filter-2">
+                  Possibly - show me what's available
+                </label>
+              </div>-->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa-4" name="doyouwantsupport" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="support-filter-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+      </form>
+      <a href="/assisted1/nsa/008-candidate-details" class="govuk-button">Continue</a>
+
+    </div>
+  </div>
+
+{% endblock %}

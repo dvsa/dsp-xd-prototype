@@ -1,0 +1,379 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Manage theory tests
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/phase-banner.html" %}
+  {% include "includes/account_1.html" %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+
+      <!-- Two thirds -->
+
+      
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">SITE-21192</span>
+        <h1 class="govuk-heading-xl" style="margin-bottom: 20px!important;">IHTTC0003</h1>
+        <br><br><br>
+      </div>
+
+      <!-- One third -->
+
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <label class="govuk-label govuk-!-font-weight-bold" for="sort">Office / IHTTC location:</label>
+            <!--fetchXml to get the distinct orgs -->
+              <select class="govuk-select " id="sort" name="sort" aria-label="sort" style="width: 300px!important;">
+                <option value="2bd0a78d-54e8-ea11-a817-000d3a7f4cf5" selected="">IHTTC0003</option>
+                <option value="2646a6ee-eae8-ea11-a817-000d3a7f4a6b">IHTTC0004</option>   
+              </select>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- Columns -->
+
+      <div class="govuk-grid-column-full">
+
+        <div class="govuk-o-grid">
+
+          <a></a>
+
+          <div class="govuk-grid-column-one-third">
+            <a></a>
+            <div class="govuk-card govuk-card--contained govuk-card--selectable">
+              <a></a>
+              <a href="#"></a>
+              <div class="govuk-card__content">
+                <h3 class="govuk-heading-m" style="color: #005ea5;">Register a new candidate</h3>
+                <p class="govuk-body" style="padding-bottom: 50px;">Enter details for a new candidate. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-card govuk-card--contained govuk-card--selectable">
+              <a href="#"></a>
+              <div class="govuk-card__content">
+                <h3 class="govuk-heading-m" style="color: #005ea5;">Manage test bookings</h3>
+                <p class="govuk-body" style="padding-bottom: 80px;">View or cancel theory test bookings. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-card govuk-card--contained govuk-card--selectable">
+              <a href="#"></a>
+              <div class="govuk-card__content">
+                <h3 class="govuk-heading-m" style="color: #005ea5;margin-bottom: 10px;">Credit balance</h3>
+                <h3 class="govuk-heading-xl" style="color: #005ea5;margin-bottom: 15px!important;">£2712</h3>
+                <p class="govuk-body">Top up your theory test account using a credit or debit card. </p>
+              </div>
+            </div>
+          </div>
+
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <style type="text/css">
+
+      .govuk-heading-m, .govuk-prose-scope h3 {
+          margin-bottom: 20px;
+          font-size: 24px;
+          line-height: 30px;
+          font-family: "nta", Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 700;
+          margin-top: 0;
+      }
+
+      .govuk-body-m, .govuk-body, .govuk-prose-scope p {
+          font-size: 19px;
+          line-height: 25px;
+          color: #0b0c0c;
+          font-family: "nta", Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-weight: 400;
+      }
+
+      .govuk-card--selectable {
+          position: relative;
+          color: #005ea5;
+      }
+
+      .govuk-card--contained {
+          background-color: #f8f8f8;
+      }
+
+      .govuk-card {
+          padding-bottom: 30px;
+          border-bottom: 3px solid #005ea5;
+          box-sizing: border-box;
+      }
+
+      .govuk-card--contained .govuk-card__content {
+          padding-right: 20px;
+          padding-left: 20px;
+      }
+
+      .govuk-card__content {
+          padding-top: 20px;
+          padding-bottom: 0;
+      }
+
+      .govuk-o-grid {
+          margin-right: -15px;
+          margin-left: -15px;
+      }
+
+      .govuk-card {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #005ea5;
+      box-sizing: border-box;
+      }
+
+
+      .govuk-\!-mb-r3 {
+          margin-bottom: 15px !important;
+      }
+
+      .govuk-o-grid__item--one-third {
+          width: 33.33333%;
+      }
+
+      .govuk-o-grid__item {
+          float: left;
+          box-sizing: border-box;
+          padding: 0 15px;
+      }
+
+      .govuk-card--selectable > a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+      }
+
+      a:link {
+          color: #005ea5;
+      }
+
+      a:-webkit-any-link {
+          cursor: pointer;
+          text-decoration: underline;
+      }
+
+      @mixin govuk-grid {
+          @include govuk-h-clearfix;
+          margin-right: - ($govuk-gutter-half);
+          margin-left: - ($govuk-gutter-half);
+        }
+
+        @mixin govuk-grid-item {
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 0 $govuk-gutter-half;
+
+          @include mq($from: tablet) {
+            float: left;
+          }
+        }
+
+        @include govuk-exports("grid") {
+
+          .govuk-o-grid {
+            @include govuk-grid;
+          }
+
+          .govuk-o-grid__item {
+            @include govuk-grid-item;
+          }
+
+          .govuk-o-grid__item--full {
+            width: 100%;
+          }
+
+          .govuk-o-grid__item--one-half {
+            @include mq($from: tablet) {
+              width: percentage(1 / 2);
+            }
+          }
+
+          .govuk-o-grid__item--one-third {
+            @include mq($from: tablet) {
+              width: percentage(1 / 3);
+            }
+          }
+
+          .govuk-o-grid__item--two-thirds {
+            @include mq($from: tablet) {
+              width: percentage(2 / 3);
+            }
+          }
+
+          .govuk-o-grid__item--one-quarter {
+            @include mq($from: tablet) {
+              width: percentage(1 / 4);
+            }
+          }
+        }
+
+        .wrapper--grey {
+          background-color: $govuk-grey-3;
+          padding: $govuk-spacing-scale-4;
+          @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+        }
+
+        section {
+          @include govuk-responsive-margin($govuk-spacing-responsive-9, "bottom");
+        }
+
+        $govuk-card-border : $govuk-blue;
+        $govuk-card-selected-background-colour : $govuk-blue;
+        $govuk-card-selected-foreground-colour : $govuk-white;
+
+        .govuk-card__flex-container {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .govuk-card__flex-item {
+          display: flex;
+          overflow: hidden;
+        }
+
+        .govuk-card {
+          @include govuk-responsive-margin($govuk-spacing-responsive-6, "bottom");
+          @include govuk-responsive-padding($govuk-spacing-responsive-6, "bottom");
+          border-bottom: 3px solid $govuk-card-border;
+          box-sizing: border-box;
+        }
+
+        .govuk-card--contained {
+          background-color: $govuk-grey-4;
+        }
+
+        .govuk-card--contained--on-background {
+          background-color: $govuk-white;
+        }
+
+        .govuk-card--borderless {
+          border: 0;
+          padding-bottom: 0;
+        }
+
+        .govuk-card--selectable {
+          position: relative;
+        }
+
+        .govuk-card--selectable h3 {
+          color: $govuk-blue;
+        }
+
+        .govuk-card--selectable a {
+          position: relative;
+          z-index: 1;
+        }
+
+        .govuk-card--selectable:hover {
+          background-color: $govuk-card-selected-background-colour;
+        }
+
+        .govuk-card--selectable:hover > .govuk-card__content > h3,
+        .govuk-card--selectable:hover > .govuk-card__content > p,
+        .govuk-card--selectable:hover > .govuk-card__content > h3 > a,
+        .govuk-card--selectable:hover > .govuk-card__actions > ul > li > a {
+          color: $govuk-card-selected-foreground-colour !important;
+        }
+
+        .govuk-card--selectable:hover > .govuk-card__content > h3 > a:hover,
+        .govuk-card--selectable:hover > .govuk-card__actions > ul > li > a:hover {
+          color: lighten($govuk-light-blue, 30%) !important;
+        }
+
+        .govuk-card--selectable > a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 0;
+        }
+
+        .govuk-card--selectable > a:focus {
+          background-color: initial !important;
+        }
+
+
+        .govuk-card__hero {
+          line-height: 0;
+        }
+
+        .govuk-card__hero img {
+          max-width: 100%;
+        }
+
+        .govuk-card__content {
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "top");
+          padding-bottom: 0;
+        }
+
+        .govuk-card__content p {
+          margin-bottom: 0;
+        }
+
+        .govuk-card__content p + p {
+          @include govuk-responsive-margin($govuk-spacing-responsive-4, "top");
+        }
+
+        .govuk-card--contained .govuk-card__content {
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "left");
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "right");
+        }
+
+        .govuk-card__actions {
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "top");
+          padding-bottom: 0;
+        }
+
+        .govuk-card--contained  .govuk-card__actions {
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "left");
+          @include govuk-responsive-padding($govuk-spacing-responsive-4, "right");
+        }
+
+        .govuk-card__actions > .govuk-c-button {
+          margin-bottom: 0;
+        }
+
+    </style>
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+

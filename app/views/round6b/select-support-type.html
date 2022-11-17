@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support type
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round6b/do-you-need-support"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Tell us about your support needs</h1>
+      <br>
+      <form class="form" method="post" action="/round6b/which-language-do-you-want-to-use">
+      {{ govukCheckboxes({
+        name: "support-type",
+        hint: {
+          text: "Select all that apply"
+        },
+        items: [
+        {
+          value: "I will need to bring a British Sign Language (BSL) interpretor",
+          html:'<p class="govuk-body govuk-!-font-weight-bold">I will need to bring a British Sign Language (BSL) interpretor</p>',
+          conditional:{
+          html:'<p class="govuk-body">You can take a British Sign Language (BSL) interpreter with you.
+          They must be at least 16 years old.
+          <p>Your driving instructor can be your interpreter.</p>
+          <p>You need to arrange your own interpreter and pay any fees that they charge. You can
+            <a href="/government/publications/apply-for-a-refund-for-use-of-a-british-sign-language-interpreter">claim the cost back</a> after your test.</p>'
+       }
+      },
+          {
+            value: "I will need to lip read to understand people speaking to me",
+            html:'<p class="govuk-body govuk-!-font-weight-bold">I will need to lip read to understand people speaking to me</p>'
+          },
+          {
+            value: "I will need the driving examiner to speak more clearly and slowly",
+            html:'<p class="govuk-body govuk-!-font-weight-bold">I will need the driving examiner to speak more clearly and slowly</p>'
+          },
+          {
+            value: "I will need to bring an adapted vehicle to take my driving test",
+            html:'<p class="govuk-body govuk-!-font-weight-bold">I will need to bring an adapted vehicle to take my driving test</p>'
+          },
+          {
+            value: "Examiner to avoid wearing bright colours and strong fragrances",
+            html:'<p class="govuk-body govuk-!-font-weight-bold">Examiner to avoid wearing bright colours and strong fragrances</p>'
+          },
+          {
+            value: "additional-support-information",
+            html:'<p class="govuk-body govuk-!-font-weight-bold">I want to share additional information about support I need during the test (please specify)</p>',
+          conditional:{
+            html:'<p class="govuk-hint">Use this space to give us any additional information about your needs</p>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>'
+         }
+        },
+        {
+
+
+          }
+        ]
+      }) }}
+<hr>
+<br>
+
+    {{ govukButton({
+      text: "Continue",
+      type: "submit"
+    }) }}
+
+    {{ govukButton({
+      text: "I do not need any support",
+      classes: "govuk-button--secondary margin-left-30",
+      href: "/round6b/which-language-do-you-want-to-use"
+
+    }) }}
+
+    </form>
+  </div>
+</div>
+{% endblock %}

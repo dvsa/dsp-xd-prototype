@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="standard">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row" id="v4-nsa">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Get the right support during your driving test</h1>
+
+    <p class="govuk-body">We want you to have everything you need to take your test.</p>
+    <p class="govuk-body">Many types of support are available if, for example, you:</p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4">
+      <li>find reading difficult</li>
+      <li>have a disability</li>
+      <li>have a health condition</li>
+    </ul>
+
+    <p class="govuk-body">You can <a href="https://www.gov.uk/driving-test/reading-difficulty-disability-or-health-condition">learn more about the types of support available</a>. These include:</p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4">
+      <li>voiceover with headphones</li>
+      <li>British Sign Language</li>
+      <li>extra time to complete your test</li>
+      <li>someone reading the questions for you</li>
+      <li>having the questions worded differentlyrequest</li>
+    </ul>
+
+    <p class="govuk-body"><strong>You may be able to select the support you want and book your test online now</strong>.</p>
+    <p class="govuk-body">Alternatively, you can tell us you want support and we'll get in touch with you.</p>
+    <p class="govuk-body">This may suit you better because we'll be able to:</p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-padding-bottom-4">
+      <li>talk to you about how we can help</li>
+      <li>make any special arrangements you might need</li>
+      <li>talk about whether we need any evidence to support your request</li>
+    </ul>
+
+      <form class="form" action="008-candidate-details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="support-filter-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading govuk-!-margin-bottom-2">
+                Do you want support for your driving test?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa" name="doyouwantsupport" type="radio" value="No">
+                <label class="govuk-label govuk-radios__label" for="support-filter">
+                  Yes
+                </label>
+              </div>
+            <!--  <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa-2" name="doyouwantsupport" type="radio" value="cont-nsa">
+                <label class="govuk-label govuk-radios__label" for="support-filter-2">
+                  Possibly - show me what's available
+                </label>
+              </div>-->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="cont-nsa-4" name="doyouwantsupport" type="radio" value="Yes">
+                <label class="govuk-label govuk-radios__label" for="support-filter-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+    </div>
+  </div>
+
+
+{% endblock %}

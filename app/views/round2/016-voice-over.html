@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="notification-alert">You can change your mind here about hearing a voiceover used during the test, or <a href="check-your-answers">go back and keep your previous choice</a>.</div>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Do you want a voiceover used during the test?</h1>
+        <p class="govuk-body">Instructions and the test questions will be read aloud through headphones provided in the test room.</p>
+
+        <form class="form" action="check-your-answers" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Yes, I want a voiceover in English
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Yes, I want a voiceover in Welsh (Cymraeg)
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  No, I do not want a voiceover
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button govuk-!-margin-right-2" data-module="govuk-button">Confirm change and continue</button>
+        <a href="check-your-answers" class="govuk-button govuk-button--secondary">Cancel and keep your existing choice</a>
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

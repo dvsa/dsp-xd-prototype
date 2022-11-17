@@ -1,0 +1,174 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" id="checkyouranswers">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your driving test booking</h1>
+
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+            John Robert Smith
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key no-border">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value no-border">
+           03 March 1992
+        </dd>
+        <dd class="govuk-summary-list__actions no-border">
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Driving licence number
+        </dt>
+        <dd class="govuk-summary-list__value">
+           DHILL654FTR389B
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+           johnsmith@email.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="009-candidate-email-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Test details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Test type
+        </dt>
+        <dd class="govuk-summary-list__value">
+            Car
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Cost
+        </dt>
+        <dd class="govuk-summary-list__value">
+          £23
+        </dd>
+        <dd class="govuk-summary-list__actions">
+
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Test time
+        </dt>
+        <dd class="govuk-summary-list__value timeslot">
+           8:00am
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of test
+        </dt>
+        <dd class="govuk-summary-list__value">
+           12 June 2020
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Language of test
+        </dt>
+        <dd class="govuk-summary-list__value">
+           English
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="007-language-change">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Additional support
+        </dt>
+        <dd class="govuk-summary-list__value">
+           Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Requested British sign language
+        </dt>
+        <dd class="govuk-summary-list__value">
+           (BSL) English
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="">
+            Change<span class="govuk-visually-hidden"> name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <a href="" class="govuk-button govuk-!-margin-right-1">Continue and pay</a> <a class="govuk-button govuk-button--secondary" href="">Cancel booking</a>
+  </div>
+</div>
+{% endblock %}

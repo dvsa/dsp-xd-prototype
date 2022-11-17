@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-panel govuk-panel--confirmation">
+    <h1 class="govuk-panel__title">
+      driving test booking confirmed
+    </h1>
+    <span style="font-size: 28px; font-weight: 700;">Booking details and a payment receipt have been emailed to {{ data['email-address'] }}</span>
+    <div class="govuk-panel__body">
+      Your reference number<br><strong>HDJ2123F</strong>
+    </div>
+  </div>
+  <div class="govuk-grid-row" id="confirmation-page">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <a class="govuk-body" href="">It may be useful to print this page</a>.
+
+      <table class="govuk-table ">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Test time and date</th>
+            <td class="govuk-table__cell">5:30pm 12 December 2020</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Test location</th>
+            <td class="govuk-table__cell"><span class="govuk-body govuk-!-font-weight-bold">Birmingham - Test Centre Provider West</span><br>
+                                          Provider West Professional Centre,<br>
+                                          38 Dale End,<br>
+                                          Birmingham,<br>
+                                          B4 7NJ </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="govuk-heading-l">Important</h2>
+      <p class="govuk-body">The person taking the test must:</p>
+      <ol class="govuk-body">
+        <li>arrive 15 minutes before the test start time</li>
+        <li>bring their driving licence (Old-style, paper licence-holders should also bring a valid passport)</li>
+      </ol>
+      <h2 class="govuk-heading-l">At the test centre</h2>
+      <p class="govuk-body">All test centres are security monitored.</p>
+
+      <p class="govuk-body">Personal items are not allowed in the testing room. They must be placed in the locker provided. These items include:</p>
+      <ul class="govuk-body">
+        <li>mobile phones or pagers</li>
+        <li>earpieces or headphones</li>
+        <li>laptops or hand-held computers</li>
+        <li>personal digital assistants (PDAs)</li>
+        <li>other electronic devices</li>
+        <li>handbags, purses or wallets</li>
+        <li>hats, bags or coats</li>
+        <li>books or revision notes</li>
+        <li>dictionaries</li>
+        <li>paper or pens</li>
+        <li>watches</li>
+        <li>food or drink</li>
+      </ul>
+      <p class="govuk-body">If a candidate is found to have any of these items in the testing room:</p>
+      <ul class="govuk-body">
+        <li>the test will be stopped and voided</li>
+        <li>they will be asked to leave</li>
+        <li>the test fee will not be refunded</li>
+      </ul>
+      <h2 class="govuk-heading-l">Waiting facilities</h2>
+      <p class="govuk-body">There are no waiting facilities for any adults or children accompanying candidates.</p>
+      <h2 class="govuk-heading-l">Prepare for the test</h2>
+      <p class="govuk-body">Learn more about <a target="_blank" href="https://www.gov.uk/driving-test/revision-and-practice">preparing for a car driving test</a> including <a href="https://www.gov.uk/take-practice-driving-test" target="_blank">free practice tests</a>.</p>
+      <h2 class="govuk-heading-l">Moving or cancelling the test</h2>
+      <p class="govuk-body">driving tests can be moved or cancelled up to 3 days before without penalty. If this booking is changed or cancelled after 25 February 2020 no refund will be made.</p>
+
+      <p class="govuk-body">You can <a target="_blank" href="https://www.gov.uk/change-driving-test">change the time of this test</a>. You can also <a href="https://www.gov.uk/cancel-driving-test" target="_blank">cancel the test</a>.</p>
+
+    </div>
+</div>
+
+{% endblock %}

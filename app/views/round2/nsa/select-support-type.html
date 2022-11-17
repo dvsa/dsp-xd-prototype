@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+<div id="qlogic" class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form wsf" action="select-vo-lang" method="post"><input type="hidden" name="headphone" value="_unchecked"><input type="hidden" name="" value="_unchecked"><input type="hidden" name="extratime" value="_unchecked"><input type="hidden" name="olm" value="_unchecked"><input type="hidden" name="reader" value="_unchecked"><input type="hidden" name="no-support" value="_unchecked">
+
+      <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-heading-xl">How can we support you to take your test?</h1>
+
+              </legend>
+              <!-- <p class="govuk-body">Accessible support is available to make your theory test more comfortable.</p> -->
+              <p class="govuk-body">Select all that apply</p>
+
+              <div class="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input vo" id="headphone" name="headphone" type="checkbox" value="Headphones provided with a voiceover" data-aria-controls="conditional-voiceover-options">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Let me stop the car to hear the question or instruction
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input" id="selectedbslinterpreter" name="" type="checkbox" value="An interpreter next to me using British Sign Language" data-aria-controls="conditional-voiceover-options">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Give me more time to understand a question or instruction
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input nsa" id="more-time" name="extratime" type="checkbox" value="nsa">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Check i understnd a question or instruction before we continue
+                  </label>
+                  <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+
+                  </span>
+                </div>
+
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="olm" type="checkbox" value="nsa">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                    Ask a question or give an instruction in another way, if I do not understand it
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="reader" type="checkbox" value="Extra time to complete the test">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Do not talk during the test unless it is essential
+                  </label>
+                  <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  </span>
+                </div>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="reader" type="checkbox" value="Extra time to complete the test">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Do not wear bright colours or strong fragrance
+                  </label>
+                  <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  </span>
+                </div>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="reader" type="checkbox" value="Extra time to complete the test">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Let me bring a British Sign Language interpreter
+                  </label>
+                  <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  </span>
+                </div>
+<p>or</p>
+                <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                  <input class="govuk-checkboxes__input ns" id="no-support" name="no-support" type="checkbox" value="Tell us what support you need.">
+                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  Other type of support
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+<a href="candidate-email" class="govuk-button govuk-!-margin-right-2">Continue</a>
+<a href="tell-us-what-support" class="govuk-button govuk-button--secondary">Talk to our support team</a>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

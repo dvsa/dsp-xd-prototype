@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row" id="select-ready-date">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+
+          </ul>
+        </div>
+      </div>
+      <h1 class="govuk-heading-xl">Enter a date to check for available driving test time slots</h1>
+      <div class="grid-row">
+        <p class="govuk-body">If no test slots are available on this date, this service can help you find one on another day.</p>
+        <div class="column-full">
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              Booked driving tests can be moved or cancelled up to 3 clear working days before without penalty.
+            </strong>
+          </div>
+          <div class="form-date">
+
+            <form id="select-date-form" action="appointment">
+            <span class="govuk-hint">
+                  For example, 12 11 2007
+                </span>
+                <div class="govuk-date-input">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="select-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="select-day" name="select-day" type="text" value="{{ data['select-day'] }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="select-month" name="select-month" type="text"  value="{{ data['select-month'] }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="select-year" name="select-year" value="{{ data['select-year'] }}">
+                    </div>
+                  </div>
+                    <input class="form-control sm-date-picker-input" id="datepicker" name="sm-date-picker" type="text" autocomplete="off">
+                </div>
+                <button class="govuk-button" data-module="govuk-button">
+                Continue
+              </button>
+                </form>
+              </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- JavaScript: jQuery UI - datepicker() -->
+
+
+{% endblock %}

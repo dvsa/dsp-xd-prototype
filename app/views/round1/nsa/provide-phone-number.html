@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <form action="">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading govuk-heading-xl">
+              Would you prefer to be contacted by telephone?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            Select one option.
+          </div>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Enter your telephone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="phonenumberadded" name="contact-by-email" type="number" spellcheck="false"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="nophonenumber" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="nophonenumber">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+        <button id="checknumberadded" class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+      </div>
+
+
+</div>
+
+{% endblock %}

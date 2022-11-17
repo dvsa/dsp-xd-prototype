@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/round5/what-you-need-to-book.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% set bodyClasses = bodyClasses | default("govuk-template-blue__body") %}
+
+{% block pageTitle %}
+What you need to book
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "/round5/service-start-page",
+classes: "govuk-back-link-white"
+}) }}
+{% endblock %}
+
+{% block header %}
+{% include "includes/cookie-banner.html" %}
+
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: serviceName,
+serviceUrl: "/",
+containerClasses: "govuk-header__full-width"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl whiteText">Book a driving test</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="/round5/nsa/who-is-taking-the-test" method="post">
+
+      <p class="govuk-body whiteText govuk-!-font-weight-bold">Use this service to:</p>
+      <br>
+
+      <ul class="govuk-list whiteText govuk-!-font-weight-bold govuk-list--bullet">
+        <li>quickly and easily find the next available test</li>
+        <li>tell us about support needed during a driving test</li>
+        <li>book a driving test</li>
+        <li>pay for a driving test</li>
+      </ul>
+
+      <br>
+
+      <p class="govuk-body whiteText govuk-!-font-weight-bold">
+        You'll need the driving licence details of the person taking the test<br>
+        and a credit or debit card to book.</p>
+    </form>
+
+    <br>
+
+    {{ govukInsetText({
+    text: "We recommend you use this official DVSA service to book a driving test.
+    We have improved this service to offer you the quickest and easiest way to find and book
+    the next available driving test that suits your needs.",
+    classes: "whiteText whiteInsetPanel govuk-!-font-weight-bold "
+    }) }}
+
+    <br>
+    <br>
+
+    <a href="/round5/who-is-taking-the-test" class="govuk-button-white" data-module="govuk-button">
+      Continue
+    </a>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <div style="margin-left: 25px;">
+      <p class="govuk-body whiteText govuk-!-font-weight-bold">Driving License</p>
+
+      <img src="/public/images/round5/driving-license.png" width="200" height="140" />
+
+      <br>
+      <br>
+      <br>
+
+      <p class="govuk-body whiteText govuk-!-font-weight-bold">Credit or debit card</p>
+
+      <img src="/public/images/round5/credit-card.png" width="200" height="140" />
+    </div>
+  </div>
+
+</div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{{ govukFooter({
+}) }}
+
+{% endblock %}

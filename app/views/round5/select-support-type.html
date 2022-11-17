@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support type
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round5/do-you-need-support"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Tell us about your support needs</h1>
+    <form class="form" method="post">
+      {{ govukCheckboxes({
+        name: "countries",
+        hint: {
+          text: "Select all that apply"
+        },
+        items: [
+          {
+            value: "bsl",
+            text: "I will need to bring a British Sign Language (BSL) interpretor with me"
+          },
+          {
+            value: "understand-question",
+            text: "I will need to lip read to understand people speaking to me"
+          },
+          {
+            value: "do-not-talk-unless-essential",
+            text: "I will need the driving examiner to speak loudly"
+          },
+          {
+            value: "adapted-vehicle",
+            text: "I will need to bring an adapted vehicle to take my driving test"
+          },
+          {
+            value: "stop-car-to-hear-question",
+            text: "I will need to stop the car to process questions and instructions"
+          },
+          {
+            value: "strong-fragrance",
+            text: "Examiner to avoid wearing bright colours and strong fragrances"
+          },
+          {
+            value: "other",
+            text: "I will need a type of support not listed here (please specify)",
+          conditional:{
+            html:'<p class="govuk-hint">Use this space to tell us other types of support not listed</p>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>'
+         }
+
+          }
+        ]
+      }) }}
+<br>
+<hr>
+<br>
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/round5/which-language-do-you-want-to-use"
+    }) }}
+
+    {{ govukButton({
+      text: "I do not need any additional support",
+      classes: "govuk-button--secondary margin-left-30",
+      href: "/round5/which-language-do-you-want-to-use"
+
+    }) }}
+
+    </form>
+  </div>
+</div>
+{% endblock %}

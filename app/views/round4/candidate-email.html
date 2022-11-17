@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row" id="candidates-email">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What is your email address?</h1>
+
+        <form class="form" action="007-langauge" method="post">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="email-address">
+              Email address
+            </label>
+            <div id="event-name-hint" class="govuk-hint">
+  We’ll only use this to send you booking confirmation.
+  </div>
+
+            <input class="govuk-input" id="email-address" name="email-address" type="email">
+          </div>
+
+
+          <!-- <div class="govuk-form-group">
+            <label class="govuk-label" for="email-address">
+              Confirm email address
+            </label>
+            <input class="govuk-input" id="email-address" name="email-address" type="email">
+          </div> -->
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

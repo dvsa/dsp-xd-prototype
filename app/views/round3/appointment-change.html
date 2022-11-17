@@ -1,0 +1,381 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Support
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div id="check-nsa" class="govuk-visually-hidden">{{ data['support'] }}</div>
+  <div class="govuk-grid-row appointment-3" id="appointment">
+    <div class="govuk-grid-column-full">
+
+      <div class="notification-alert">You can change the test date and time here, or <a href="check-your-answers">go back and keep your existing date and time</a>.</div>
+
+            <h1 class="govuk-heading-xl">Choose a new  time for this driving test</h1>
+            <p class="govuk-body">Showing results for <span class="govuk-!-font-weight-bold">Swansea</span> - <span><a href="004-search-for-test-centre-change">change</a></span>
+            <ul class="date-slider week1 ">
+              <li class="date-btn mon1 active">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Monday</span>
+                <span class="date-select govuk-body">2 June</span>
+              </li>
+              <li class="date-btn tue1">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Tuesday</span>
+                <span class="date-select govuk-body">3 June</span>
+              </li>
+              <li class="date-btn wed1">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Wednesday</span>
+                <span class="date-select govuk-body">4 June</span>
+              </li>
+              <li class="date-btn thu1">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Thursday</span>
+                <span class="date-select govuk-body">5 June</span>
+              </li>
+              <li class="date-btn fri1">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Friday</span>
+                <span class="date-select govuk-body">6 June</span>
+              </li>
+              <li class="date-btn sat1">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Saturday</span>
+                <span class="date-select govuk-body">7 June</span>
+              </li>
+            </ul>
+
+
+            <ul class="date-slider week2">
+              <li class="date-btn mon2 active">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Monday</span>
+                <span class="date-select govuk-body">8 June</span>
+              </li>
+              <li class="date-btn tue2">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Tuesday</span>
+                <span class="date-select govuk-body">9 June</span>
+              </li>
+              <li class="date-btn wed2">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Wednesday</span>
+                <span class="date-select govuk-body">10 June</span>
+              </li>
+              <li class="date-btn thu2">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Thursday</span>
+                <span class="date-select govuk-body">11 June</span>
+              </li>
+              <li class="date-btn fri2">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Friday</span>
+                <span class="date-select govuk-body">12 June</span>
+              </li>
+              <li class="date-btn sat2">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Saturday</span>
+                <span class="date-select govuk-body">13 June</span>
+              </li>
+            </ul>
+
+            <ul class="date-slider week3">
+              <li class="date-btn mon3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Monday</span>
+                <span class="date-select govuk-body">14 June</span>
+              </li>
+              <li class="date-btn tue3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Tuesday</span>
+                <span class="date-select govuk-body">15 June</span>
+              </li>
+              <li class="date-btn wed3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Wednesday</span>
+                <span class="date-select govuk-body">16 June</span>
+              </li>
+              <li class="date-btn thu3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Thursday</span>
+                <span class="date-select govuk-body">17 June</span>
+              </li>
+              <li class="date-btn fri3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Friday</span>
+                <span class="date-select govuk-body">18 June</span>
+              </li>
+              <li class="date-btn sat3">
+                <span class="day-select govuk-body govuk-!-font-weight-bold">Saturday</span>
+                <span class="date-select govuk-body">19 June</span>
+              </li>
+            </ul>
+
+            <div class="time-slider">
+              <div class="week1-view slot-view week1">
+                <div class="day-slot week1-mon">
+                  <h2 class="govuk-heading-m">Monday 2 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">9:30am</span>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="govuk-button govuk-button--secondary">10:45am</span>
+                  <span class="govuk-button govuk-button--secondary">11:15am</span>
+                  <span class="govuk-button govuk-button--secondary">11:30am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">12:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">4:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week1-tue">
+                  <h2 class="govuk-heading-m">Tuesday 3 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week1-wed">
+                  <h2 class="govuk-heading-m">Wednesday 4 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                </div>
+                <div class="day-slot week1-thu">
+                  <h2 class="govuk-heading-m">Thursday 5 June</h2>
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                </div>
+                <div class="day-slot week1-fri">
+                  <h2 class="govuk-heading-m">Friday 6 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                </div>
+                <div class="day-slot week1-sat">
+                  <h2 class="govuk-heading-m">Saturday 7 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">12:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:10pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:20pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:40pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:45pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:50pm</span>
+                  <span class="govuk-button govuk-button--secondary">12:55pm</span>
+                  <span class="govuk-button govuk-button--secondary">1:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">1:10pm</span>
+                  <span class="govuk-button govuk-button--secondary">1:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">1:40pm</span>
+                  <span class="govuk-button govuk-button--secondary">1:50pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:20pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:40pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday week-jump-back1">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow week-jump1">Next day</div>
+                  </span>
+                </div>
+                <span class="week-1-next govuk-body next">Next week</span>
+
+              </div>
+
+              <div class="week2-view slot-view week2">
+                <div class="day-slot week2-mon">
+                  <h2 class="govuk-heading-m">Monday 8 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">9:15am</span>
+                  <span class="govuk-button govuk-button--secondary">9:30am</span>
+                  <span class="govuk-button govuk-button--secondary">10:00am</span>
+                  <span class="govuk-button govuk-button--secondary">10:15am</span>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="govuk-button govuk-button--secondary">10:45am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+
+                <div class="day-slot week2-tue">
+                  <h2 class="govuk-heading-m">Tuesday 9 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">11am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">4:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                </div>
+                <div class="day-slot week2-wed">
+                  <h2 class="govuk-heading-m">Wednesday 10 June</h2>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week2-thu">
+                  <h2 class="govuk-heading-m">Thursday 11 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+
+                <div class="day-slot week2-fri">
+                  <h2 class="govuk-heading-m">Friday 12 June</h2>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week2-sat">
+                  <h2 class="govuk-heading-m">Saturday 13 June</h2>
+                    <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:15am</span>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday week-jump-back2">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow week-jump2">Next day</div>
+                  </span>
+
+                </div>
+
+                <span class="week-2-next govuk-body next">Next week</span>
+                <span class="week-2-prev govuk-body previous">Week before</span>
+
+              </div>
+              <div class="week3-view slot-view week3">
+                <div class="day-slot week3-mon">
+                  <h2 class="govuk-heading-m">Monday 14 June</h2>
+                    <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week3-tue">
+                  <h2 class="govuk-heading-m">Tuesday 15 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="govuk-button govuk-button--secondary">2:30pm</span>
+                  <span class="govuk-button govuk-button--secondary">5:30pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week3-wed">
+                  <h2 class="govuk-heading-m">Wednesday 16 June</h2>
+                  <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">10am</span>
+                  <span class="govuk-button govuk-button--secondary">11:30am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week3-thu">
+                  <h2 class="govuk-heading-m">Thursday 17 June</h2>
+                    <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">10:15am</span>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week3-fri">
+                  <h2 class="govuk-heading-m">Friday 18 June</h2>
+                    <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="govuk-button govuk-button--secondary">2:00pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+                <div class="day-slot week3-sat">
+                  <h2 class="govuk-heading-m">Saturday 19 June</h2>
+                    <h3 class="govuk-heading-s">Morning</h3>
+                  <span class="govuk-button govuk-button--secondary">9am</span>
+                  <span class="govuk-button govuk-button--secondary">10:15am</span>
+                  <span class="govuk-button govuk-button--secondary">10:30am</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday week-jump-back3">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+                  <br />
+                  <h3 class="govuk-heading-s">Afternoon</h3>
+                  <span class="govuk-button govuk-button--secondary">3pm</span>
+                  <span class="this-day-toggle">
+                    <div class="toggle-day govuk-body yesterday">Day before</div>
+                    <div class="toggle-day govuk-body tomorrow">Next day</div>
+                  </span>
+
+                </div>
+
+                <span class="week-3-prev previous govuk-body">Week before</span>
+              </div>
+            </div>
+    </div>
+</div>
+
+{% endblock %}

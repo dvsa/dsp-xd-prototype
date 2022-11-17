@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        We'll contact you about support for your driving test
+      </h1>
+      <p class="govuk-body">Thank you for providing these details. You won't be able to book your test online right now. We need to know a little more about the kind of support that will help you.</p>
+      <p class="govuk-body">Tell us how to contact you and we'll get in touch to make arrangements.</p>
+      <p class="govuk-body">It will help us arrange your test if you can tell us where and when you would like to take it.</p>
+      <a href="prefered-day" class="govuk-button">Continue</a>
+    </div>
+  </div>
+
+{% endblock %}

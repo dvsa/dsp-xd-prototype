@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/round6/choose-test-date-and-time">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row" id="#">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Enter the email address of the person taking the test</h1>
+
+    <form class="form" method="post">
+      {{ govukInput({
+        hint: {
+          text: "We'll use this to send a confirmation email, a receipt and the test result."
+        },
+        id: "candidate-email",
+        name: "candidate-email",
+        classes: "govuk-input--width-50"
+      }) }}
+
+      {{ govukButton({
+        text: "Continue",
+        href: "/round6/check-your-booking-details"
+      }) }}
+    </form>
+  </div>
+</div>
+
+{% endblock %}

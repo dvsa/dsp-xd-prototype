@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div id="qlogic" class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form wsf" action="staying-nsa" method="post">
+
+        <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-5">
+                    What test support do you want?
+                  </h1>
+                </legend>
+                <p class="govuk-body">Accessible support is available to make your driving test more comfortable.</p>
+                <p class="govuk-body">Select the items you want for your test. If you need something else, select 'Other'.</p>
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input sa" id="bsl-int" name="bsl-sa" type="checkbox" value="BSL on screen" aria-describedby="nationality-item-hint">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality">
+                        On-screen British Sign Language
+                    </label>
+                    <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+
+                    </span>
+                  </div>
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input" id="" name="bsl-int" type="checkbox" value="BSL interpreter" data-aria-controls="conditional-voiceover-options">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-2">
+                    An interpreter next to me using British Sign Language
+                    </label>
+                    <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+
+                    </span>
+                  </div>
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input vo" id="selectedbslinterpreter" name="headphone" type="checkbox" value="Headphones provided with a voiceover" data-aria-controls="conditional-voiceover-options">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-2">
+                    Headphones and voiceover
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input nsa" id="foreign-language-translator" name="foreign-language-translator" type="checkbox" value="A foreign language translator">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-3">
+                    A translator
+                    </label>
+                    <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    </span>
+                  </div>
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input nsa" id="more-time" name="extratime" type="checkbox" value="nsa" {{ checked("support", "nsa") }}>
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-3">
+                      Extra time
+                    </label>
+                  </div>
+
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="olm" type="checkbox" value="nsa" {{ checked("support", "nsa") }}>
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-3">
+                      Someone to ask the test questions in a different way (an Oral Language Modifier)
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input nsa" id="read-the-questions" name="reader" type="checkbox" value="Extra time to complete the test" {{ checked("support", "nsa") }}>
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-3">
+                    Someone to read the test to me and enter my answers
+                    </label>
+                    <span id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                    </span>
+                  </div>
+
+                  <div class="govuk-checkboxes__item govuk-!-margin-bottom-5">
+                    <input class="govuk-checkboxes__input ns" id="no-support" name="no-support" type="checkbox" value="Tell us what support you need.">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="nationality-3">
+                    Other
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

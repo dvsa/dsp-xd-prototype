@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Book your driving test online now or wait and talk to us first
+      </h1>
+      <p class="govuk-body">You can select 'Continue' to book your driving test online now.</p>
+      <p class="govuk-body">Or, if you prefer, select 'Talk to our support team' and we'll contact you at a convenient time to:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-7">
+        <li>talk through your needs</li>
+        <li>check you have the right support</li>
+        <li>book your test for you</li>
+      </ul>
+      <a href="candidate-email" class="govuk-button govuk-!-margin-right-2">Continue</a>
+      <a href="staying-nsa" class="govuk-button govuk-button--secondary">Talk to our support team</a>
+    </div>
+  </div>
+
+{% endblock %}

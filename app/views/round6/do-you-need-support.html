@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Get support during your driving test
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/round6/which-test-are-you-booking"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row" id="v4-nsa">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Get support during your driving test</h1>
+
+      <p class="govuk-body">You can get support during your driving test if you have a:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>disability</li>
+        <li>health condition</li>
+        <li>learning difficulty</li>
+        <li>neurodivergent condition - for example, autism, dyslexia or ADHD</li>
+      </ul>
+
+      <p class="govuk-body">Find out more about the <a
+          href="https://www.gov.uk/driving-test/disability-health-condition-or-learning-difficulty" target="_blank">support you can get
+          during your driving test</a>.</p>
+<br>
+      <form class="form" method="post" id="formID">
+        {{ govukRadios({
+          classes: "govuk-radios--inline",
+          name: "additional-support",
+          fieldset: {
+            legend: {
+              text: "Do you need support on your driving test?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              id: "yes-option",
+              value: "yes",
+              text: "Yes"
+            },
+            {
+              id: "no-option",
+              value: "no",
+              text: "No"
+            }
+          ]
+        }) }}
+<hr>
+<br>
+      {{ govukButton({
+        attributes: {
+          id: "continue"
+        },
+        text: "Continue",
+        type: "submit"
+      }) }}
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    addEventListener('submit', (event) => {
+      const form = document.getElementById("formID")
+      if(document.getElementById('yes-option').checked){
+        form.action = "/round6/select-support-type"
+      }
+      if(document.getElementById('no-option').checked){
+        form.action = "/round6/which-language-do-you-want-to-use"
+      }
+    })
+  </script>
+{% endblock %}
